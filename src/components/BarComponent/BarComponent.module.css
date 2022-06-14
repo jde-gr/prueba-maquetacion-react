@@ -1,0 +1,19 @@
+.barComponent {
+  background: #f5f3ff !important;
+  padding: 23px 120px 25px 120px;
+  display: flex;
+  flex-direction: row !important;
+}
+
+.headerLogo {
+}
+
+.headerSpace {
+  width: 106px;
+}
+
+.headerLogoImage {
+  float: left;
+  width: 167px;
+  height: 42px;
+}
