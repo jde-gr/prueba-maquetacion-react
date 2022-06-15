@@ -1,6 +1,7 @@
 .nav {
   flex-grow: 1;
 }
+
 .navBar {
   flex-grow: 1;
   display: flex;
@@ -10,7 +11,7 @@
 }
 
 .navBar li {
-  font-family: "Stolzl";
+  font-family: 'Stolzl';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;

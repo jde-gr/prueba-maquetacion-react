@@ -3,9 +3,7 @@
   padding: 23px 120px 25px 120px;
   display: flex;
   flex-direction: row !important;
-}
-
-.headerLogo {
+  box-shadow: none !important;
 }
 
 .headerSpace {

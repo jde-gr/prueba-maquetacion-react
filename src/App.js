@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "./App.component.css";
-import BarComponent from "./components/BarComponent/BarComponent";
-import ModulePartner from "./components/ModulePartner/ModulePartner";
+import React from 'react';
+import BarComponent from './ModuleMenu/BarComponent/BarComponent';
+import ModulePartner from './ModulePartner/ModulePartner';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
