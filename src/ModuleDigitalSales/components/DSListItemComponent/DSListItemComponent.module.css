@@ -1,0 +1,16 @@
+.checkIcon {
+  width: 28px;
+  height: 28px;
+}
+
+.liText {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+
+  letter-spacing: 0.01em;
+
+  color: #ffffff;
+}

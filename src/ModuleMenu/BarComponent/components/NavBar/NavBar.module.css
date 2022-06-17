@@ -1,3 +1,42 @@
+.navigationMenu {
+  margin-left: auto;
+  flex-grow: 1;
+}
+
+.navigationMenu ul,
+.navUl {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.navigationMenu ul li,
+.navUlLi {
+  /* removes default disc bullet for li tags and applies margin to left & right side */
+  list-style-type: none;
+  margin: 10px 0;
+
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1f0742;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+.navigationMenu ul li a,
+.navUlLiA {
+  /* increases the surface area of the anchor tag to span more than just the anchor text */
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  color: #1f0742;
+}
+
 .nav {
   flex-grow: 1;
 }
@@ -21,4 +60,42 @@
   color: #1f0742;
   display: inline-block;
   padding: 10px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+  .navigationMenu ul {
+    /* navigation menu is positioned to start 60px from the top of the document (which is directly below the navbar) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* stacks the li tags vertically  */
+    flex-direction: column;
+    /* makes menu span full height and width */
+    width: 100%;
+    height: calc(100vh - 77px);
+    background-color: white;
+    border-top: 1px solid black;
+    display: none;
+  }
+  .navigationMenu.expanded ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    z-index: 100;
+  }
+  .navigationMenu li {
+    /* centers link text and strips off margin */
+    text-align: center;
+    margin: 0;
+  }
+  .navigationMenu li a {
+    color: black;
+    /* increases the surface area of the anchor tag to span the full width of the menu */
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+  .navigationMenu li:hover {
+    background-color: #eee;
+  }
 }

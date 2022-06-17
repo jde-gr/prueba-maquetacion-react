@@ -1,0 +1,58 @@
+.row {
+  margin: 0;
+}
+
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+}
+
+.h1Container {
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.h1Header {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 400;
+  /* font-size: 52px; */
+  /* font-size: calc(32px + (52 - 32) * (100vw - 400px) / (800 - 400)); */
+  /* font-size: calc(32px + (52 - 32) * 1vw / 10); */
+  font-size: 32px + 1.5vw;
+  /* line-height: 56px; */
+  /* line-height: calc(32px + (56 - 32) * (100vw - 400px) / (800 - 400)); */
+  /* line-height: calc(32px + (56 - 32) * 1vw / 10); */
+  line-height: 32px + 1.5vw;
+  letter-spacing: -0.02em;
+  color: #1f0742;
+}
+
+.msgContainer {
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.signatureContainer {
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+.signatureImage {
+  width: 218px;
+  height: 35.61px;
+}
+
+.imageColumn {
+  margin-top: 16px;
+}
+
+.imageContainer {
+  width: 100%;
+}

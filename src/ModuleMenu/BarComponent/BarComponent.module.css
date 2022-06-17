@@ -1,8 +1,12 @@
-.barComponent {
-  background: #f5f3ff !important;
-  padding: 23px 120px 25px 120px;
+.navigation {
+  height: 90px;
+  width: 100%;
   display: flex;
-  flex-direction: row !important;
+  align-items: center;
+  position: relative;
+  padding: 23px 120px 25px 120px;
+  background-color: #f5f3ff !important;
+  color: black;
   box-shadow: none !important;
 }
 
@@ -11,7 +15,36 @@
 }
 
 .headerLogoImage {
-  float: left;
+  /* float: left; */
   width: 167px;
   height: 42px;
+  margin-left: 0px;
+}
+
+.menuIconPosition {
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+}
+
+.menuIcon {
+  /* height: 13px !important;
+  width: 17px !important; */
+  /* padding: 0.5rem; */
+  /* border-radius: 50%; */
+  color: #6c30eb !important;
+  cursor: pointer;
+  /* transition: color 0.2s ease-in-out; */
+  /* positions the icon to the right and center aligns it vertically */
+  position: absolute !important;
+  top: 50% !important;
+  right: 23px !important;
+  transform: translateY(-50%) !important;
+  display: none !important;
+}
+
+@media screen and (max-width: 991px) {
+  .menuIcon {
+    display: block !important;
+  }
 }
