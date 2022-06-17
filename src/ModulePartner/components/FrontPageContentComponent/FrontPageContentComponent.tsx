@@ -14,7 +14,7 @@ const FrontPageContentComponent: FC<FrontPageContentComponentProps> = () => (
       </div>
       <div className={styles.msgContainer}>
         <p>
-          Un modelo de trabajo end to end que integra
+          Un modelo de trabajo end to end que integra{' '}
           <span style={{ fontWeight: 'bold' }}>
             tecnología, medios y creatividad.
           </span>

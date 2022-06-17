@@ -1,12 +1,12 @@
 import React, { lazy, Suspense } from 'react';
 
-const LazyNavBar = lazy(() => import('./NavBar'));
+const LazyNavBarComponent = lazy(() => import('./NavBarComponent'));
 
 const NavBar = (
   props: JSX.IntrinsicAttributes & { children?: React.ReactNode }
 ) => (
   <Suspense fallback={null}>
-    <LazyNavBar isNavExpanded={false} {...props} />
+    <LazyNavBarComponent isNavExpanded={false} {...props} />
   </Suspense>
 );
 

@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
-import styles from './NavBar.module.css';
+import styles from './NavBarComponent.module.css';
 
-interface NavBarProps {
+interface NavBarComponentProps {
   isNavExpanded: boolean;
 }
 
-const NavBar: FC<NavBarProps> = (props) => {
+const NavBarComponent: FC<NavBarComponentProps> = (props) => {
   const { isNavExpanded } = props;
   console.log(`isNavExpanded:  ${isNavExpanded}`);
   return (
@@ -35,12 +35,9 @@ const NavBar: FC<NavBarProps> = (props) => {
         <li>
           <a href="/">¿Quiénes somos?</a>
         </li>
-        <li>
-          <a href="/">ENG</a>
-        </li>
       </ul>
     </div>
   );
 };
 
-export default NavBar;
+export default NavBarComponent;

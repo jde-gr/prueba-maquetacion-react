@@ -1,0 +1,144 @@
+.navigationMenu {
+  /* margin-left: auto; */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  padding: 0 29px 0 34px;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 90px);
+  z-index: 100;
+  background-color: #1f0742 !important;
+}
+
+.navigationMenu ul,
+.navUl {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  justify-content: start;
+  margin: 0;
+}
+
+.navigationMenu ul li,
+.navUlLi {
+  list-style-type: none;
+  margin: 13px 0;
+
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  color: white;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+.navigationMenu ul li a,
+.navUlLiA {
+  /* increases the surface area of the anchor tag to span more than just the anchor text */
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  color: white;
+}
+
+.navigationMenu ul li span {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 14px;
+  color: white;
+  display: block;
+}
+
+.navigationMenu li:hover {
+  color: lightgoldenrodyellow;
+}
+
+.nav {
+  flex-grow: 1;
+}
+
+.buttonContainer {
+  margin-top: 12px;
+}
+
+.emailContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4px;
+  flex: none;
+  flex-grow: 0;
+  margin-top: 32px;
+}
+
+.pThin {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  color: white;
+  margin: 0;
+}
+
+.pBold {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+  margin: 0;
+}
+
+.pBold a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.langContainer {
+  display: flex;
+  margin-top: 56px;
+}
+
+.langContainer p {
+  height: 28px;
+  margin-right: 23px;
+}
+
+.langContainer p.active {
+  border-bottom: 1px solid white;
+}
+
+.langContainer p a {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #6c30eb;
+  text-decoration: none;
+}
+
+.langContainer p.active a {
+  color: white;
+}

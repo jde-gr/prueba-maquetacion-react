@@ -64,6 +64,12 @@
 }
 
 @media screen and (max-width: 991px) {
+  .navigationMenu ul li {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .navigationMenu ul {
     /* navigation menu is positioned to start 60px from the top of the document (which is directly below the navbar) */
     position: absolute;
@@ -75,7 +81,7 @@
     width: 100%;
     height: calc(100vh - 77px);
     background-color: white;
-    border-top: 1px solid black;
+    border-top: 1px solid #1f0742;
     display: none;
   }
   .navigationMenu.expanded ul {
@@ -90,12 +96,12 @@
     margin: 0;
   }
   .navigationMenu li a {
-    color: black;
+    color: #1f0742;
     /* increases the surface area of the anchor tag to span the full width of the menu */
     width: 100%;
     padding: 1.5rem 0;
   }
   .navigationMenu li:hover {
-    background-color: #eee;
+    color: #444;
   }
 }

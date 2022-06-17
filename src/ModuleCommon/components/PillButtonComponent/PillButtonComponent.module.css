@@ -1,20 +1,10 @@
-.moduleForm {
-  padding: 0px;
-
-  position: absolute;
-  width: 274px;
-  /* left: calc(50% - 274px / 2 + 551px); */
-  right: 32px;
-  top: 611px;
-}
-
 .container {
-  width: 274px;
   height: 58px;
   border-radius: 29.5px;
   background: #6c30eb;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .buttonContent {
@@ -25,7 +15,6 @@
   padding: 0px;
   margin: auto;
 
-  width: 226px;
   height: 24px;
   left: 28px;
   top: 17px;
@@ -43,7 +32,6 @@
 
   color: #ffffff;
 
-  /* Inside auto layout */
   flex: none;
   order: 0;
   flex-grow: 1;
