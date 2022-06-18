@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import NavComponent from './ModuleMenu/components/NavComponent/NavComponent';
 import ModulePartner from './ModulePartner/ModulePartner';
-import ModuleForm from './ModuleForm/ModuleForm';
 import ModuleDigitalSales from './ModuleDigitalSales/ModuleDigitalSales';
 
 function App() {

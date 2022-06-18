@@ -7,10 +7,76 @@
 }
 
 .container {
-  /* display: block; */
   position: relative;
-  /* height: 613px;
-  margin-left: 221px;
-  margin-right: 120px; */
   margin-top: 16px;
+  padding-left: 25px;
+}
+
+.containerForm {
+  position: relative;
+  margin-top: 16px;
+  padding-left: 25px;
+}
+
+.buttonContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+  margin: auto;
+
+  height: 24px;
+  left: 32px;
+  top: 21px;
+}
+
+.formContainerWrapper {
+  padding: 0 !important;
+}
+
+.modalButtonText {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  margin-bottom: 0px;
+  color: #6c30eb;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.modalButtonIcon {
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  color: #6c30eb;
+  width: 14px !important;
+  height: 14px !important;
+  margin: 3px 0;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+  .containerForm {
+    padding-left: 120px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .modalButtonText {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .modalButtonIcon {
+    width: 11px !important;
+    height: 11px !important;
+    margin: 2px 0;
+  }
 }

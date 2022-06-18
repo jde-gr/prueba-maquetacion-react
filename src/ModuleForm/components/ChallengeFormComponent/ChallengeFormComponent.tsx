@@ -1,18 +1,19 @@
+import React, { FC } from 'react';
+import { useMeasure } from 'react-use';
 import {
   Checkbox,
   FormControlLabel,
+  makeStyles,
   OutlinedInputProps,
   styled,
   TextField,
   TextFieldProps,
 } from '@material-ui/core';
 import '@material-ui/core/colors';
-// import React, { FC, useState } from 'react';
-import React, { FC, useState } from 'react';
+
 import PillButtonComponent, {
   PillIcon,
 } from '../../../ModuleCommon/components/PillButtonComponent/PillButtonComponent';
-
 import styles from './ChallengeFormComponent.module.css';
 
 // const isEmpty = (value: string) => value.trim() === '';
@@ -85,6 +86,13 @@ const ChallengeFormComponent: FC<ChallengeFormComponentProps> = (props) => {
     formInputsValidity.city ? '' : styles.invalid
   }`; */
 
+  const [ref, { width }] = useMeasure<HTMLDivElement>();
+
+  const buttonWidth: number = Math.min(244, width);
+  const buttonContentWidth: number = Math.min(212, width - 32);
+  const containerWidth: string = `${buttonWidth}px`;
+  const contentWidth: string = `${buttonContentWidth}px`;
+
   const CssTextField = styled((props: TextFieldProps) => (
     <TextField
       InputProps={{ disableUnderline: true } as Partial<OutlinedInputProps>}
@@ -112,70 +120,85 @@ const ChallengeFormComponent: FC<ChallengeFormComponentProps> = (props) => {
     },
   });
 
+  const useStyles = makeStyles((theme) => ({
+    label: {
+      fontSize: theme.typography.pxToRem(11),
+      letterSpacing: '0.03333em',
+      lineHeight: theme.typography.pxToRem(14),
+    },
+  }));
+
+  const classes = useStyles();
   return (
-    <form className={styles.form} onSubmit={confirmHandler}>
-      <CssTextField
-        className={styles.formInput}
-        id="name"
-        label="Nombre completo*"
-        fullWidth
-        variant="filled"
-      />
-      <CssTextField
-        className={styles.formInput}
-        id="email"
-        label="Email*"
-        fullWidth
-        variant="filled"
-      />
-      <CssTextField
-        className={styles.formInput}
-        id="company"
-        label="Empresa*"
-        fullWidth
-        variant="filled"
-      />
-      <CssTextField
-        className={styles.formInput}
-        id="position"
-        label="Cargo en la empresa*"
-        defaultValue=""
-        fullWidth
-        variant="filled"
-      />
-      <CssTextField
-        id="message"
-        label="Mensaje*"
-        defaultValue=""
-        multiline
-        rows={3}
-        fullWidth
-        variant="filled"
-      />
-      <p className={styles.formLegend}>*Este campo es obligatorio</p>
-      <FormControlLabel
-        className={styles.formControlLabel}
-        control={<Checkbox className={styles.formCheckbox} />}
-        label="Acepto que me envíen comunicaciones por parte de Global Sales Partnership*"
-      />
-      <FormControlLabel
-        className={styles.formControlLabel}
-        control={<Checkbox className={styles.formCheckbox} defaultChecked />}
-        label="He leído y acepto la política de privacidad*"
-      />
-      <div className={styles.actionsDiv}>
-        <button type="submit" className={styles.submitBtn}>
-          <PillButtonComponent
-            containerWidth="244px"
-            contentWidth="212px"
-            buttonText="Enviar"
-            hasIcon={true}
-            centerText={true}
-            icon={PillIcon.Send}
-          />
-        </button>
-      </div>
-      {/* <div className={nameControlClasses}>
+    <div ref={ref}>
+      <form className={styles.form} onSubmit={confirmHandler}>
+        <CssTextField
+          className={styles.formInput}
+          id="name"
+          label="Nombre completo*"
+          fullWidth
+          variant="filled"
+        />
+        <CssTextField
+          className={styles.formInput}
+          id="email"
+          label="Email*"
+          fullWidth
+          variant="filled"
+        />
+        <CssTextField
+          className={styles.formInput}
+          id="company"
+          label="Empresa*"
+          fullWidth
+          variant="filled"
+        />
+        <CssTextField
+          className={styles.formInput}
+          id="position"
+          label="Cargo en la empresa*"
+          defaultValue=""
+          fullWidth
+          variant="filled"
+        />
+        <CssTextField
+          id="message"
+          label="Mensaje*"
+          defaultValue=""
+          multiline
+          minRows={3}
+          fullWidth
+          variant="filled"
+        />
+        <p className={styles.formLegend}>*Este campo es obligatorio</p>
+        <FormControlLabel
+          className={styles.formControlLabel}
+          control={<Checkbox className={styles.formCheckbox} />}
+          label="Acepto que me envíen comunicaciones por parte de Global Sales Partnership*"
+          classes={classes}
+        />
+        <FormControlLabel
+          className={styles.formControlLabel}
+          control={
+            <Checkbox className={styles.formCheckbox} defaultChecked required />
+          }
+          label="He leído y acepto la política de privacidad*"
+          classes={classes}
+          /* onChange={handlePrivacyPolicyChange} */
+        />
+        <div className={styles.actionsDiv}>
+          <button type="submit" className={styles.submitBtn}>
+            <PillButtonComponent
+              containerWidth={containerWidth}
+              contentWidth={contentWidth}
+              buttonText="Enviar"
+              hasIcon={true}
+              centerText={true}
+              icon={PillIcon.Send}
+            />
+          </button>
+        </div>
+        {/* <div className={nameControlClasses}>
         <label htmlFor="name">Nombre completo*</label>
         <input
           type="text"
@@ -192,11 +215,12 @@ const ChallengeFormComponent: FC<ChallengeFormComponentProps> = (props) => {
         <input type="text" id="street" ref={streetInputRef} />
         {!formInputsValidity.street && <p>Please enter a valid street!</p>}
       </div> */}
-      {/* <div className={styles.actions}>
+        {/* <div className={styles.actions}>
         <button type="button" onClick={props.onCancel}>Cancel</button>
         <button className={styles.submit}>Confirm</button>
       </div> */}
-    </form>
+      </form>
+    </div>
   );
 };
 

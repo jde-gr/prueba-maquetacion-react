@@ -5,16 +5,26 @@ import PillButtonComponent, {
   PillIcon,
 } from '../ModuleCommon/components/PillButtonComponent/PillButtonComponent';
 
-interface ModuleFormProps {}
+interface ModuleFormProps {
+  onClick: () => void;
+}
 
-const ModuleForm: FC<ModuleFormProps> = () => (
-  <div className={styles.moduleForm}>
-    <PillButtonComponent
-      buttonText="¡Cuéntanos tu reto!"
-      hasIcon={true}
-      icon={PillIcon.KeyboardArrowUp}
-    />
-  </div>
-);
+const ModuleForm: FC<ModuleFormProps> = (props) => {
+  const confirmHandler = () => {
+    props.onClick();
+  };
+
+  return (
+    <div className={styles.moduleForm}>
+      <div onClick={confirmHandler} className={styles.submitBtn}>
+        <PillButtonComponent
+          buttonText="¡Cuéntanos tu reto!"
+          hasIcon={true}
+          icon={PillIcon.KeyboardArrowUp}
+        />
+      </div>
+    </div>
+  );
+};
 
 export default ModuleForm;

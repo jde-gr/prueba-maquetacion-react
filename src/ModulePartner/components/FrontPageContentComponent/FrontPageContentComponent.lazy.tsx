@@ -1,10 +1,19 @@
 import React, { lazy, Suspense } from 'react';
 
-const LazyFrontPageContentComponent = lazy(() => import('./FrontPageContentComponent'));
+const LazyFrontPageContentComponent = lazy(
+  () => import('./FrontPageContentComponent')
+);
 
-const FrontPageContentComponent = (props: JSX.IntrinsicAttributes & { children?: React.ReactNode; }) => (
+const FrontPageContentComponent = (
+  props: JSX.IntrinsicAttributes & { children?: React.ReactNode }
+) => (
   <Suspense fallback={null}>
-    <LazyFrontPageContentComponent {...props} />
+    <LazyFrontPageContentComponent
+      onClick={function (): void {
+        throw new Error('Function not implemented.');
+      }}
+      {...props}
+    />
   </Suspense>
 );
 

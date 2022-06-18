@@ -5,18 +5,18 @@ import Arrow from '../../../ModuleCommon/components/Arrow/Arrow';
 import ModuleForm from '../../../ModuleForm/ModuleForm';
 import styles from './FrontPageContentComponent.module.css';
 
-interface FrontPageContentComponentProps {}
+interface FrontPageContentComponentProps {
+  onClick: () => void;
+  showFormButton?: boolean;
+}
 
-const FrontPageContentComponent: FC<FrontPageContentComponentProps> = () => {
-  /* const [open, setOpen] = useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
+const FrontPageContentComponent: FC<FrontPageContentComponentProps> = ({
+  onClick,
+  showFormButton = true,
+}) => {
+  const confirmHandler = () => {
+    onClick();
   };
-
-  const handleClose = () => {
-    setOpen(false);
-  }; */
 
   return (
     <Row className={styles.row}>
@@ -53,7 +53,7 @@ const FrontPageContentComponent: FC<FrontPageContentComponentProps> = () => {
             alt="Tu partner para conseguir más leads, más ventas, más revenue"
           />
         </div>
-        <ModuleForm /* onClick={handleClickOpen} */ />
+        {showFormButton && <ModuleForm onClick={confirmHandler} />}
       </Col>
     </Row>
   );
