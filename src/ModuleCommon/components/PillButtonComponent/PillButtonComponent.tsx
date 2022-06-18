@@ -12,6 +12,7 @@ interface PillButtonComponentProps {
   containerWidth?: string;
   contentWidth?: string;
   hasIcon: boolean;
+  centerText?: boolean;
   icon?: PillIcon;
 }
 
@@ -20,17 +21,25 @@ const defaultProps: PillButtonComponentProps = {
   containerWidth: '274px',
   contentWidth: '226px',
   hasIcon: false,
+  centerText: false,
   icon: PillIcon.KeyboardArrowUp,
 };
 
 const PillButtonComponent: FC<PillButtonComponentProps> = (props) => {
-  const { buttonText, containerWidth, contentWidth, hasIcon, icon } = props;
+  const {
+    buttonText,
+    containerWidth,
+    contentWidth,
+    hasIcon,
+    centerText,
+    icon,
+  } = props;
   return (
     <div className={styles.container} style={{ width: containerWidth }}>
       <div className={styles.buttonContent} style={{ width: contentWidth }}>
         <p
           className={styles.buttonText}
-          style={!hasIcon ? { textAlign: 'center' } : {}}
+          style={!hasIcon || centerText ? { textAlign: 'center' } : {}}
         >
           {buttonText}
         </p>

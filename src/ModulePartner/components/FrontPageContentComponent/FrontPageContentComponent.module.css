@@ -19,15 +19,15 @@
 .h1Header {
   font-family: 'Stolzl';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   /* font-size: 52px; */
   /* font-size: calc(32px + (52 - 32) * (100vw - 400px) / (800 - 400)); */
   /* font-size: calc(32px + (52 - 32) * 1vw / 10); */
-  font-size: 32px + 1.5vw;
+  font-size: calc(32px + 0.8vw);
   /* line-height: 56px; */
   /* line-height: calc(32px + (56 - 32) * (100vw - 400px) / (800 - 400)); */
   /* line-height: calc(32px + (56 - 32) * 1vw / 10); */
-  line-height: 32px + 1.5vw;
+  line-height: calc(32px + 0.8vw);
   letter-spacing: -0.02em;
   color: #1f0742;
 }
@@ -55,4 +55,23 @@
 
 .imageContainer {
   width: 100%;
+}
+
+.arrowScroll {
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  transform: rotate(90deg);
+  margin: 114px 0 32px 0;
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .h1Header {
+    font-size: calc(32px + 1.5vw);
+    line-height: calc(32px + 1.5vw);
+  }
+  .arrowScroll {
+    display: none;
+  }
 }

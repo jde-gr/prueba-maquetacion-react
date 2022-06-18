@@ -1,0 +1,75 @@
+.challengeFormButtonSm {
+  padding: 0px;
+  position: absolute;
+  left: 0;
+  bottom: -62.5px;
+}
+
+.container {
+  height: 125px;
+  border-radius: 29.5px;
+  background: #6c30eb;
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.buttonContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+  margin: auto;
+
+  height: 24px;
+  left: 32px;
+  top: 21px;
+}
+
+.buttonText {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+
+  letter-spacing: 0.02em;
+  margin-bottom: 0px;
+
+  color: white;
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.buttonIcon {
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  color: #ffffff;
+}
+
+.modalButtonText {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  margin-bottom: 0px;
+  color: #6c30eb;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.modalButtonIcon {
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  color: #6c30eb;
+}

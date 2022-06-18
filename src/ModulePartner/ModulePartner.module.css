@@ -14,10 +14,3 @@
   margin-right: 120px; */
   margin-top: 16px;
 }
-
-.arrowScroll {
-  position: absolute;
-  left: 0;
-  bottom: 32px;
-  transform: rotate(90deg);
-}

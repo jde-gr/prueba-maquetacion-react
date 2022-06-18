@@ -87,7 +87,7 @@
   .navigationMenu.expanded ul {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     z-index: 100;
   }
   .navigationMenu li {

@@ -5,7 +5,7 @@
   width: 274px;
   /* left: calc(50% - 274px / 2 + 551px); */
   right: 32px;
-  top: 611px;
+  bottom: 32px;
 }
 
 .container {
@@ -54,4 +54,10 @@
   order: 1;
   flex-grow: 0;
   color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .moduleForm {
+    display: none;
+  }
 }

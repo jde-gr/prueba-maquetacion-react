@@ -2,8 +2,8 @@ import React, { FC, useEffect } from 'react';
 import { Col, Row } from 'react-bootstrap';
 
 import styles from './ModulePartner.module.css';
-import Arrow from '../ModuleCommon/components/Arrow/Arrow';
 import FrontPageContentComponent from './components/FrontPageContentComponent/FrontPageContentComponent';
+import ChallengeFormSMComponent from '../ModuleForm/components/ChallengeFormSMComponent/ChallengeFormSMComponent';
 
 interface ModulePartnerProps {}
 
@@ -18,22 +18,28 @@ const ModulePartner: FC<ModulePartnerProps> = () => {
     return () => window.removeEventListener('resize', handleWindowResize);
   }, []);
 
+  const formButtonContentWidth = width - 32 * 2;
+
   return (
     <Row className={styles.modulePartner}>
       {width < breakPoint ? (
         <>
-          <FrontPageContentComponent />
-          <div className={styles.arrowScroll}>
-            <Arrow />
-          </div>
-          )
+          <Col className={styles.container}>
+            <FrontPageContentComponent />
+            <ChallengeFormSMComponent
+              containerWidth={`${width}px`}
+              contentWidth={`${formButtonContentWidth}px`}
+            />
+          </Col>
         </>
       ) : (
-        <Col xs={12} md={{ span: 9, offset: 2 }} className={styles.container}>
+        <Col
+          xs={12}
+          md={{ span: 10, offset: 1 }}
+          lg={{ span: 9, offset: 2 }}
+          className={styles.container}
+        >
           <FrontPageContentComponent />
-          <div className={styles.arrowScroll}>
-            <Arrow />
-          </div>
         </Col>
       )}
     </Row>

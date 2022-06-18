@@ -17,7 +17,7 @@
 .toggleIconPosition {
   flex-grow: 1;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .toggleIcon {
