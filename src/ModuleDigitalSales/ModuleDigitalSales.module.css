@@ -37,7 +37,6 @@
   width: 400px;
   height: 288px;
 
-  /* Inside auto layout */
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -53,7 +52,6 @@
   width: 400px;
   height: 307px;
 
-  /* Inside auto layout */
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -67,13 +65,10 @@
   line-height: 42px;
   margin-bottom: 32px;
 
-  /* or 117% */
   letter-spacing: 0.01em;
 
-  /* BLANCO */
   color: #ffffff;
 
-  /* Inside auto layout */
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -86,13 +81,10 @@
   font-size: 16px;
   line-height: 26px;
 
-  /* or 162% */
   letter-spacing: 0.02em;
 
-  /* BLANCO */
   color: #ffffff;
 
-  /* Inside auto layout */
   flex: none;
   order: 1;
   flex-grow: 0;
