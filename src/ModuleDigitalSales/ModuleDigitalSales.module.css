@@ -1,7 +1,8 @@
 .moduleDigitalSales {
   width: 100%;
-  height: 515px;
+  /* height: 515px; */
   background: #370087 url('/public/images/background_gsp_01\ 1.svg');
+  background-size: cover;
 }
 
 .row {
@@ -10,13 +11,20 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 0px;
-  gap: 217px;
 
   position: relative;
-  width: 998px;
+  /* width: 998px;
   height: 307px;
   left: 221px;
-  top: 104px;
+  top: 104px; */
+}
+
+.container {
+  position: relative;
+  margin-top: 16px;
+  padding-left: 25px;
+  padding-bottom: 104px;
+  padding-top: 104px;
 }
 
 .column1 {
@@ -57,6 +65,7 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 42px;
+  margin-bottom: 32px;
 
   /* or 117% */
   letter-spacing: 0.01em;
@@ -96,6 +105,8 @@
   padding: 0px;
   gap: 24px;
 
+  margin-bottom: 40px;
+
   /* Inside auto layout */
   flex: none;
   order: 1;
@@ -114,9 +125,8 @@
 .ctaRow {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: stretch;
   padding: 0px;
-  gap: 48px;
 
   height: 22px;
 
@@ -127,20 +137,38 @@
 }
 
 .ctaButton {
-  /* font-family: 'Stolzl';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22px; */
   font: normal 400 14px/22px 'Stolzl' !important;
-
   text-align: right;
   letter-spacing: 0.01em;
-
   color: #ffffff !important;
-
   flex: none;
   flex-grow: 0;
-
   text-transform: none !important;
+  min-width: auto;
+}
+
+.ctaIcon {
+  font-size: 20px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 97px 20px 48px 25px;
+  }
+
+  .ctaRow {
+    gap: inherit;
+  }
+
+  .h2 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 24px;
+  }
+
+  .p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
 }

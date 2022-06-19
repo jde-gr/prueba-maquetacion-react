@@ -72,4 +72,5 @@
   order: 1;
   flex-grow: 0;
   color: #6c30eb;
+  cursor: pointer;
 }
