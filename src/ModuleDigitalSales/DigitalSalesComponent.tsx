@@ -73,6 +73,7 @@ const DigitalSalesComponent: FC<DigitalSalesComponentProps> = () => {
           paddingBottom={104}
           paddingTop={104}
           wrappedModule={WrappedModule.ModuleDigitalSales}
+          backgroundColor={'#370087'}
         >
           <Col>
             <h2 className={styles.h2}>

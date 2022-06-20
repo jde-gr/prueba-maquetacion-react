@@ -17,6 +17,7 @@ interface MDWrapperComponentProps {
   paddingBottom: number;
   paddingTop: number;
   wrappedModule?: WrappedModule;
+  backgroundColor?: string;
 }
 
 const MDWrapperComponent: FC<MDWrapperComponentProps> = (props) => {
@@ -39,7 +40,7 @@ const MDWrapperComponent: FC<MDWrapperComponentProps> = (props) => {
       className={styles.MDWrapperComponent}
       style={{
         height: wrapperHeight,
-        backgroundColor: '#370087',
+        backgroundColor: props.backgroundColor ?? '#ffffff',
         backgroundImage: `url(${background})`,
         backgroundSize: 'cover',
       }}
