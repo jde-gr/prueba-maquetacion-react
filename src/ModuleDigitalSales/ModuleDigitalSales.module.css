@@ -1,7 +1,7 @@
 .moduleDigitalSales {
   width: 100%;
   /* height: 515px; */
-  background: #370087 url('/public/images/background_gsp_01\ 1.svg');
+  background: #370087 url('/src/components/backgrounds/background_gsp_01.svg');
   background-size: cover;
 }
 
@@ -23,8 +23,6 @@
   position: relative;
   margin-top: 16px;
   padding-left: 25px;
-  padding-bottom: 104px;
-  padding-top: 104px;
 }
 
 .column1 {

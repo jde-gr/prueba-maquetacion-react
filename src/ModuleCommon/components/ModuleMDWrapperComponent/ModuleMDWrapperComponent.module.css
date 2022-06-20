@@ -1,0 +1,13 @@
+.ModuleMDWrapperComponent {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+
+  position: relative;
+}
