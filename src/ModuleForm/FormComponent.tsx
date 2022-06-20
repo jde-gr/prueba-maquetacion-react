@@ -1,21 +1,21 @@
 import React, { FC } from 'react';
 
-import styles from './ModuleForm.module.css';
+import styles from './FormComponent.module.css';
 import PillButtonComponent, {
   PillIcon,
 } from '../ModuleCommon/components/PillButtonComponent/PillButtonComponent';
 
-interface ModuleFormProps {
+interface FormComponentProps {
   onClick: () => void;
 }
 
-const ModuleForm: FC<ModuleFormProps> = (props) => {
+const FormComponent: FC<FormComponentProps> = (props) => {
   const confirmHandler = () => {
     props.onClick();
   };
 
   return (
-    <div className={styles.moduleForm}>
+    <div className={styles.formComponent}>
       <div onClick={confirmHandler} className={styles.submitBtn}>
         <PillButtonComponent
           buttonText="¡Cuéntanos tu reto!"
@@ -27,4 +27,4 @@ const ModuleForm: FC<ModuleFormProps> = (props) => {
   );
 };
 
-export default ModuleForm;
+export default FormComponent;

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useMeasure } from 'react-use';
-import styles from './ModuleMDWrapperComponent.module.css';
+import styles from './MDWrapperComponent.module.css';
 import backgroundDigitalSales from '../../../components/backgrounds/background_gsp_01.svg';
 import backgroundSencilloYAgil from '../../../components/backgrounds/shutterstock_52496590.png';
 import backgroundHablemos from '../../../components/backgrounds/shutterstock_524965909.png';
@@ -13,13 +13,13 @@ export enum WrappedModule {
   none,
 }
 
-interface ModuleMDWrapperComponentProps {
+interface MDWrapperComponentProps {
   paddingBottom: number;
   paddingTop: number;
   wrappedModule?: WrappedModule;
 }
 
-const ModuleMDWrapperComponent: FC<ModuleMDWrapperComponentProps> = (props) => {
+const MDWrapperComponent: FC<MDWrapperComponentProps> = (props) => {
   const [ref, { height }] = useMeasure<HTMLDivElement>();
   const wrapperHeight = `${height + props.paddingBottom + props.paddingTop}px`;
 
@@ -36,7 +36,7 @@ const ModuleMDWrapperComponent: FC<ModuleMDWrapperComponentProps> = (props) => {
 
   return (
     <div
-      className={styles.ModuleMDWrapperComponent}
+      className={styles.MDWrapperComponent}
       style={{
         height: wrapperHeight,
         backgroundColor: '#370087',
@@ -69,4 +69,4 @@ const ModuleMDWrapperComponent: FC<ModuleMDWrapperComponentProps> = (props) => {
   );
 };
 
-export default ModuleMDWrapperComponent;
+export default MDWrapperComponent;

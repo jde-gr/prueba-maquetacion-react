@@ -1,16 +1,16 @@
 import React, { FC, useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 
-import styles from './ModulePartner.module.css';
+import styles from './PartnerComponent.module.css';
 import FrontPageContentComponent from './components/FrontPageContentComponent/FrontPageContentComponent';
 import ChallengeFormSMComponent from '../ModuleForm/components/ChallengeFormSMComponent/ChallengeFormSMComponent';
 import ChallengeFormComponent from '../ModuleForm/components/ChallengeFormComponent/ChallengeFormComponent';
 import FormContainerComponent from '../ModuleForm/components/FormContainerComponent/FormContainerComponent';
 import { Close } from '@material-ui/icons';
 
-interface ModulePartnerProps {}
+interface PartnerComponentProps {}
 
-const ModulePartner: FC<ModulePartnerProps> = () => {
+const PartnerComponent: FC<PartnerComponentProps> = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const breakPoint = 768; // md
 
@@ -34,7 +34,7 @@ const ModulePartner: FC<ModulePartnerProps> = () => {
   const formButtonContentWidth = width - 32 * 2;
 
   return (
-    <Row className={styles.modulePartner}>
+    <Row className={styles.partnerComponent}>
       {width < breakPoint ? (
         <>
           <Col className={styles.container}>
@@ -78,4 +78,4 @@ const ModulePartner: FC<ModulePartnerProps> = () => {
   );
 };
 
-export default ModulePartner;
+export default PartnerComponent;

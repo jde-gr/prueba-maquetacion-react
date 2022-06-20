@@ -1,12 +1,12 @@
 import React, { lazy, Suspense } from 'react';
 
-const LazyModuleForm = lazy(() => import('./ModuleForm'));
+const LazyFormComponent = lazy(() => import('./FormComponent'));
 
-const ModuleForm = (
+const FormComponent = (
   props: JSX.IntrinsicAttributes & { children?: React.ReactNode }
 ) => (
   <Suspense fallback={null}>
-    <LazyModuleForm
+    <LazyFormComponent
       onClick={function (): void {
         throw new Error('Function not implemented.');
       }}
@@ -15,4 +15,4 @@ const ModuleForm = (
   </Suspense>
 );
 
-export default ModuleForm;
+export default FormComponent;

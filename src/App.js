@@ -3,15 +3,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './styles.css';
 import NavComponent from './ModuleMenu/components/NavComponent/NavComponent';
-import ModulePartner from './ModulePartner/ModulePartner';
-import ModuleDigitalSales from './ModuleDigitalSales/ModuleDigitalSales';
+import PartnerComponent from './ModulePartner/PartnerComponent';
+import DigitalSalesComponent from './ModuleDigitalSales/DigitalSalesComponent';
 
 function App() {
   return (
     <div>
       <NavComponent />
-      <ModulePartner />
-      <ModuleDigitalSales />
+      <PartnerComponent />
+      <DigitalSalesComponent />
     </div>
   );
 }

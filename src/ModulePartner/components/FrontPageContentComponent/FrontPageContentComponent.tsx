@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Col, Row } from 'react-bootstrap';
 
 import Arrow from '../../../ModuleCommon/components/Arrow/Arrow';
-import ModuleForm from '../../../ModuleForm/ModuleForm';
+import FormComponent from '../../../ModuleForm/FormComponent';
 import styles from './FrontPageContentComponent.module.css';
 
 interface FrontPageContentComponentProps {
@@ -53,7 +53,7 @@ const FrontPageContentComponent: FC<FrontPageContentComponentProps> = ({
             alt="Tu partner para conseguir más leads, más ventas, más revenue"
           />
         </div>
-        {showFormButton && <ModuleForm onClick={confirmHandler} />}
+        {showFormButton && <FormComponent onClick={confirmHandler} />}
       </Col>
     </Row>
   );

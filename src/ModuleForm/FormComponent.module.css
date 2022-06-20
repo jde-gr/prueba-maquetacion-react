@@ -1,4 +1,4 @@
-.moduleForm {
+.formComponent {
   padding: 0px;
 
   position: absolute;
@@ -57,7 +57,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .moduleForm {
+  .formComponent {
     display: none;
   }
 }

@@ -2,16 +2,16 @@ import React, { FC, useEffect, useState } from 'react';
 import { ChevronRight } from '@material-ui/icons';
 import { Button } from '@material-ui/core';
 
-import styles from './ModuleDigitalSales.module.css';
+import styles from './DigitalSalesComponent.module.css';
 import DSListItemComponent from './components/DSListItemComponent/DSListItemComponent';
 import { Col } from 'react-bootstrap';
-import ModuleMDWrapperComponent, {
+import MDWrapperComponent, {
   WrappedModule,
-} from '../ModuleCommon/components/ModuleMDWrapperComponent/ModuleMDWrapperComponent';
+} from '../ModuleCommon/components/ModuleMDWrapperComponent/MDWrapperComponent';
 
-interface ModuleDigitalSalesProps {}
+interface DigitalSalesComponentProps {}
 
-const ModuleDigitalSales: FC<ModuleDigitalSalesProps> = () => {
+const DigitalSalesComponent: FC<DigitalSalesComponentProps> = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const breakPoint = 768; // md
 
@@ -69,7 +69,7 @@ const ModuleDigitalSales: FC<ModuleDigitalSalesProps> = () => {
           </Col>
         </div>
       ) : (
-        <ModuleMDWrapperComponent
+        <MDWrapperComponent
           paddingBottom={104}
           paddingTop={104}
           wrappedModule={WrappedModule.ModuleDigitalSales}
@@ -143,10 +143,10 @@ const ModuleDigitalSales: FC<ModuleDigitalSalesProps> = () => {
               </Button>
             </div>
           </Col>
-        </ModuleMDWrapperComponent>
+        </MDWrapperComponent>
       )}
     </>
   );
 };
 
-export default ModuleDigitalSales;
+export default DigitalSalesComponent;
