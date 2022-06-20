@@ -42,7 +42,7 @@ const FrontPageContentComponent: FC<FrontPageContentComponentProps> = ({
           />
         </div>
         <div className={styles.arrowScroll}>
-          <Arrow />
+          <Arrow down={true} />
         </div>
       </Col>
       <Col xs={12} md={7} className={styles.imageColumn}>

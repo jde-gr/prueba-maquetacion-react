@@ -2,3 +2,9 @@
   height: 32px;
   width: 32px;
 }
+
+.arrowDown {
+  height: 32px;
+  width: 32px;
+  transform: rotate(90deg);
+}

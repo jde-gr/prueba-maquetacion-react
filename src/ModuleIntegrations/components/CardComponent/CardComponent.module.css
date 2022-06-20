@@ -1,0 +1,55 @@
+.card {
+  margin-bottom: 16px;
+}
+
+.cardH2 {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #282240;
+  padding-top: 10px;
+}
+
+.cardP {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #282240;
+}
+
+.buttonContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0px;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.buttonText {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: right;
+  letter-spacing: 0.01em;
+  color: #6c30eb;
+  padding-top: 2px;
+}
+
+.buttonIcon {
+  /*  width: 16px;
+    height: 16px; */
+  color: #6c30eb;
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    margin-bottom: 12px;
+  }
+}
