@@ -1,1 +1,64 @@
-.TrustTheExperienceComponent {}
+.h2 {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.01em;
+  color: #1f0742;
+
+  margin-bottom: 24px;
+}
+
+.p {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  color: #1f0742;
+
+  margin-bottom: 24px;
+}
+
+.buttonContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0px;
+  padding-top: 12px;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.buttonText {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: #1f0742;
+  padding-top: 4px;
+}
+
+.imgCol {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 64px 20px 48px 25px;
+  }
+
+  .h2 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
