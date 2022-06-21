@@ -1,1 +1,77 @@
-.BrandsComponent {}
+.h3 {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #282240;
+
+  margin-bottom: 8px;
+}
+
+.p {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #1f0742;
+
+  margin-bottom: 24px;
+}
+
+.buttonContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0px;
+  padding-top: 12px;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.buttonText {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: #1f0742;
+  padding-top: 4px;
+}
+
+.imgCol {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.rsis-container button {
+  background: #6c30eb !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 64px 20px 48px 25px;
+  }
+
+  .h3 {
+    font-size: 22px;
+    line-height: 28px;
+
+    margin-bottom: 16px;
+  }
+
+  .p {
+    margin-bottom: 32px;
+  }
+}

@@ -3,8 +3,8 @@ import { Col, Row } from 'react-bootstrap';
 import { useMeasure } from 'react-use';
 import styles from './MDWrapperComponent.module.css';
 import backgroundDigitalSales from '../../../components/backgrounds/background_gsp_01.svg';
-import backgroundSencilloYAgil from '../../../components/backgrounds/shutterstock_52496590.png';
-import backgroundHablemos from '../../../components/backgrounds/shutterstock_524965909.png';
+import backgroundSimpleAndAgile from '../../../components/backgrounds/shutterstock_52496590.png';
+import backgroundLetUsTalk from '../../../components/backgrounds/shutterstock_524965909.png';
 
 export enum WrappedModule {
   ModuleDigitalSales,
@@ -29,10 +29,10 @@ const MDWrapperComponent: FC<MDWrapperComponentProps> = (props) => {
     background = backgroundDigitalSales;
   }
   if (props.wrappedModule === WrappedModule.ModuleSimpleAndAgile) {
-    background = backgroundSencilloYAgil;
+    background = backgroundSimpleAndAgile;
   }
   if (props.wrappedModule === WrappedModule.ModuleLetUsTalk) {
-    background = backgroundHablemos;
+    background = backgroundLetUsTalk;
   }
 
   return (
