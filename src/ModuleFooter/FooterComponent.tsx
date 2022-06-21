@@ -1,7 +1,7 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useState, useContext } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { useMeasure } from 'react-use';
 import LogoComponent from '../ModuleMenu/components/LogoComponent/LogoComponent';
+import FormContext from '../store/FormContext';
 import styles from './FooterComponent.module.css';
 
 interface FooterComponentProps {}
@@ -9,6 +9,8 @@ interface FooterComponentProps {}
 const FooterComponent: FC<FooterComponentProps> = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const breakPoint = 768; // md
+
+  const ctx = useContext(FormContext);
 
   const smPT = 40;
   const smPR = 20;
@@ -89,20 +91,23 @@ const FooterComponent: FC<FooterComponentProps> = () => {
       ) : (
         <div className={styles.footer} style={{ backgroundColor: 'white' }}>
           <Row className={styles.row}>
-            {/* <Col
-            xs={12}
-            md={open ? { span: 8 } : { span: 8, offset: 1 }}
-            lg={open ? { span: 8 } : { span: 8, offset: 2 }}
-            className={open ? styles.containerForm : styles.container}
-          > */}
             <Col
+              xs={12}
+              md={ctx.isOpen ? { span: 9 } : { span: 12 }}
+              className={ctx.isOpen ? styles.containerForm : styles.container}
+              style={{
+                paddingTop: 64,
+                paddingBottom: 12,
+              }}
+            >
+              {/* <Col
               xs={12}
               className={styles.container}
               style={{
                 paddingTop: 64,
                 paddingBottom: 12,
               }}
-            >
+            > */}
               <Row>
                 <Col>
                   <div

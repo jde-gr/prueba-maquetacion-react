@@ -2,6 +2,16 @@
   width: 100%;
 }
 
+.container {
+  position: relative;
+  padding-left: 25px;
+}
+
+.containerForm {
+  position: relative;
+  padding-left: 25px;
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -10,4 +20,16 @@
   padding: 0px;
 
   position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .containerForm {
+    padding-left: 120px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding-right: 20px;
+  }
 }

@@ -25,8 +25,8 @@ const LetUsTalkComponent: FC<LetUsTalkComponentProps> = () => {
 
   const containerWidth =
     windowWidth < breakPoint
-      ? (windowWidth - smPR - smPL) * 0.82
-      : width * 0.82;
+      ? Math.max((windowWidth - smPR - smPL) * 0.82, 244)
+      : Math.max(width * 0.82, 244);
   const contentWidth = containerWidth - 32.0;
 
   useEffect(() => {

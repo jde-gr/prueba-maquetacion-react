@@ -1,10 +1,11 @@
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useMeasure } from 'react-use';
 import styles from './MDWrapperComponent.module.css';
 import backgroundDigitalSales from '../../../components/backgrounds/background_gsp_01.svg';
 import backgroundSimpleAndAgile from '../../../components/backgrounds/shutterstock_52496590.png';
 import backgroundLetUsTalk from '../../../components/backgrounds/shutterstock_524965909.png';
+import FormContext from '../../../store/FormContext';
 
 export enum WrappedModule {
   ModuleDigitalSales,
@@ -22,6 +23,9 @@ interface MDWrapperComponentProps {
 
 const MDWrapperComponent: FC<MDWrapperComponentProps> = (props) => {
   const [ref, { height }] = useMeasure<HTMLDivElement>();
+
+  const ctx = useContext(FormContext);
+
   const wrapperHeight = `${height + props.paddingBottom + props.paddingTop}px`;
 
   let background = undefined;
@@ -46,17 +50,11 @@ const MDWrapperComponent: FC<MDWrapperComponentProps> = (props) => {
       }}
     >
       <Row className={styles.row}>
-        {/* <Col
-            xs={12}
-            md={open ? { span: 8 } : { span: 8, offset: 1 }}
-            lg={open ? { span: 8 } : { span: 8, offset: 2 }}
-            className={open ? styles.containerForm : styles.container}
-          > */}
         <Col
           xs={12}
-          md={{ span: 9, offset: 1 }}
-          lg={{ span: 8, offset: 2 }}
-          className={styles.container}
+          md={ctx.isOpen ? { span: 8 } : { span: 8, offset: 1 }}
+          lg={ctx.isOpen ? { span: 8 } : { span: 8, offset: 2 }}
+          className={ctx.isOpen ? styles.containerForm : styles.container}
           style={{
             paddingBottom: props.paddingBottom,
             paddingTop: props.paddingTop,

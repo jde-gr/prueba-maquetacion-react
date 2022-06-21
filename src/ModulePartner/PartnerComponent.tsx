@@ -8,9 +8,12 @@ import ChallengeFormComponent from '../ModuleForm/components/ChallengeFormCompon
 import FormContainerComponent from '../ModuleForm/components/FormContainerComponent/FormContainerComponent';
 import { Close } from '@material-ui/icons';
 
-interface PartnerComponentProps {}
+interface PartnerComponentProps {
+  onFormOpen: () => void;
+  onFormClose: () => void;
+}
 
-const PartnerComponent: FC<PartnerComponentProps> = () => {
+const PartnerComponent: FC<PartnerComponentProps> = (props) => {
   const [width, setWidth] = useState(window.innerWidth);
   const breakPoint = 768; // md
 
@@ -18,10 +21,12 @@ const PartnerComponent: FC<PartnerComponentProps> = () => {
 
   const handleClickOpen = () => {
     setOpen(true);
+    props.onFormOpen();
   };
 
   const handleClose = () => {
     setOpen(false);
+    props.onFormClose();
   };
 
   useEffect(() => {
