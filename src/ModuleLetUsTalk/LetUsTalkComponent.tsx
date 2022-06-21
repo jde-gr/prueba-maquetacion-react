@@ -47,7 +47,7 @@ const LetUsTalkComponent: FC<LetUsTalkComponentProps> = () => {
             paddingLeft: smPL,
             backgroundColor: '#370087',
           }}
-          className={styles.container}
+          className={`${styles.container} ${styles.letUsTalkComponent}`}
         >
           <img
             src="/images/envelope.png"
