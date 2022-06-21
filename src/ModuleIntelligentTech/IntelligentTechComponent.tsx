@@ -69,7 +69,7 @@ const IntelligentTechComponent: FC<IntelligentTechComponentProps> = () => {
         <MDWrapperComponent
           paddingBottom={104}
           paddingTop={104}
-          wrappedModule={WrappedModule.none}
+          wrappedModule={WrappedModule.None}
           backgroundColor={'#00eac5'}
         >
           <Col style={{ paddingTop: 8.5, paddingBottom: 8.5 }}>

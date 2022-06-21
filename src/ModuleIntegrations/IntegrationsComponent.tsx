@@ -71,7 +71,7 @@ const IntegrationsComponent: FC<IntegrationsComponentProps> = () => {
         <MDWrapperComponent
           paddingBottom={104}
           paddingTop={104}
-          wrappedModule={WrappedModule.none}
+          wrappedModule={WrappedModule.None}
           backgroundColor={'white'}
         >
           <Col>

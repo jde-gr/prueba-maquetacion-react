@@ -10,7 +10,7 @@ export enum WrappedModule {
   ModuleDigitalSales,
   ModuleSimpleAndAgile,
   ModuleLetUsTalk,
-  none,
+  None,
 }
 
 interface MDWrapperComponentProps {

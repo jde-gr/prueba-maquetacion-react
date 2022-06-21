@@ -79,7 +79,7 @@ const TrustTheExperienceComponent: FC<
         <MDWrapperComponent
           paddingBottom={104}
           paddingTop={104}
-          wrappedModule={WrappedModule.none}
+          wrappedModule={WrappedModule.None}
           backgroundColor={'#f5f3ff'}
         >
           <Col style={{ paddingTop: 8.5, paddingBottom: 8.5 }}>

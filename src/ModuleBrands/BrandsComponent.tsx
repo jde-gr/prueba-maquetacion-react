@@ -2,6 +2,7 @@ import React, { FC, useEffect, useState } from 'react';
 import { Col } from 'react-bootstrap';
 import SimpleImageSlider from 'react-simple-image-slider';
 import { useMeasure } from 'react-use';
+
 import MDWrapperComponent, {
   WrappedModule,
 } from '../ModuleCommon/components/ModuleMDWrapperComponent/MDWrapperComponent';
@@ -80,7 +81,7 @@ const BrandsComponent: FC<BrandsComponentProps> = () => {
         <MDWrapperComponent
           paddingBottom={96}
           paddingTop={96}
-          wrappedModule={WrappedModule.none}
+          wrappedModule={WrappedModule.None}
           backgroundColor={'#ffffff'}
         >
           <Col md={{ span: 10, offset: 1 }} ref={ref}>
