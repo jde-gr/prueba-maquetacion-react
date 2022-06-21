@@ -18,9 +18,9 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const storedUserLoggedInInformation = localStorage.getItem('isOpen');
+    const storedFormOpenInformation = localStorage.getItem('isOpen');
 
-    if (storedUserLoggedInInformation === '1') {
+    if (storedFormOpenInformation === '1') {
       setIsOpen(true);
     }
   }, []);
