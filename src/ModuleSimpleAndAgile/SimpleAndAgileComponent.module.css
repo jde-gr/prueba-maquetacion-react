@@ -2,28 +2,6 @@
   background-image: url('/src/components/backgrounds/shutterstock_52496590.png');
 }
 
-.h2 {
-  font-family: 'Stolzl';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 42px;
-  letter-spacing: 0.01em;
-  color: #ffffff;
-}
-
-.p {
-  font-family: 'Stolzl';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-
-  margin-bottom: 20px;
-}
-
 .imgCol {
   display: flex;
   flex-direction: row;
@@ -34,19 +12,5 @@
 @media screen and (max-width: 767px) {
   .container {
     padding: 64px 20px 48px 25px;
-  }
-
-  .descContainer {
-    margin-bottom: 32px;
-  }
-
-  .h2 {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 30px;
-  }
-
-  .p {
-    margin-bottom: 28px;
   }
 }

@@ -7,6 +7,7 @@ import ImgButtonComponent, {
 import MDWrapperComponent, {
   WrappedModule,
 } from '../ModuleCommon/components/ModuleMDWrapperComponent/MDWrapperComponent';
+import ITMessageComponent from './components/ITMessageComponent/ITMessageComponent';
 import styles from './IntelligentTechComponent.module.css';
 
 interface IntelligentTechComponentProps {}
@@ -54,14 +55,7 @@ const IntelligentTechComponent: FC<IntelligentTechComponentProps> = () => {
             height={imgHeight}
             style={{ marginBottom: 32 }}
           />
-          <div className={styles.descContainer}>
-            <h2 className={styles.h2}>Tecnología inteligente a tu servicio</h2>
-          </div>
-          <p className={styles.p}>
-            Inteligencia artificial aplicada a la conversión y a la venta. Somos
-            los creadores de la tecnología más implementada y avanzada en la
-            gestión de Leads y cierre de ventas.
-          </p>
+          <ITMessageComponent />
           <ImgButtonComponent
             color="#1f0742"
             icon={ImgIcon.Arrow}
@@ -76,16 +70,7 @@ const IntelligentTechComponent: FC<IntelligentTechComponentProps> = () => {
           backgroundColor={'#00eac5'}
         >
           <Col style={{ paddingTop: 8.5, paddingBottom: 8.5 }}>
-            <div className={styles.descContainer}>
-              <h2 className={styles.h2}>
-                Tecnología inteligente a tu servicio
-              </h2>
-            </div>
-            <p className={styles.p}>
-              Inteligencia artificial aplicada a la conversión y a la venta.
-              Somos los creadores de la tecnología más implementada y avanzada
-              en la gestión de Leads y cierre de ventas.
-            </p>
+            <ITMessageComponent />
             <ImgButtonComponent
               color="#1f0742"
               icon={ImgIcon.Arrow}

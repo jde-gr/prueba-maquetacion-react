@@ -1,0 +1,21 @@
+.h2 {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .descContainer {
+    margin-bottom: 32px;
+  }
+
+  .h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}

@@ -7,6 +7,9 @@ import ImgButtonComponent, {
 import MDWrapperComponent, {
   WrappedModule,
 } from '../ModuleCommon/components/ModuleMDWrapperComponent/MDWrapperComponent';
+import SAImageComponent from './components/SAImageComponent/SAImageComponent';
+import SAParagraphComponent from './components/SAParagraphComponent/SAParagraphComponent';
+import SATitleComponent from './components/SATitleComponent/SATitleComponent';
 import styles from './SimpleAndAgileComponent.module.css';
 
 interface SimpleAndAgileComponentProps {}
@@ -48,24 +51,9 @@ const SimpleAndAgileComponent: FC<SimpleAndAgileComponentProps> = () => {
             backgroundColor: '#370087',
           }}
         >
-          <div className={styles.descContainer}>
-            <h2 className={styles.h2}>Comenzar es sencillo y ágil:</h2>
-          </div>
-          <img
-            src="/images/Slider@3x.png"
-            alt="Tecnología Inteligente"
-            width={imgWidth}
-            height={imgHeight}
-            style={{ marginBottom: 32 }}
-          />
-          <p className={styles.p}>
-            Recuerda,{' '}
-            <span style={{ fontWeight: 'bold' }}>
-              nuestra facturación se va realizando a medida que vamos logrando
-              las ventas.
-            </span>{' '}
-            Si no vendemos, no cobramos.
-          </p>
+          <SATitleComponent />
+          <SAImageComponent imgWidth={imgWidth} imgHeight={imgHeight} />
+          <SAParagraphComponent />
           <ImgButtonComponent
             color="#ffffff"
             icon={ImgIcon.Arrow}
@@ -80,17 +68,8 @@ const SimpleAndAgileComponent: FC<SimpleAndAgileComponentProps> = () => {
           backgroundColor={'#6c30eb'}
         >
           <Col style={{ paddingTop: 8.5, paddingBottom: 8.5 }}>
-            <div className={styles.descContainer}>
-              <h2 className={styles.h2}>Comenzar es sencillo y ágil:</h2>
-            </div>
-            <p className={styles.p}>
-              Recuerda,{' '}
-              <span style={{ fontWeight: 'bold' }}>
-                nuestra facturación se va realizando a medida que vamos logrando
-                las ventas.
-              </span>{' '}
-              Si no vendemos, no cobramos.
-            </p>
+            <SATitleComponent />
+            <SAParagraphComponent />
             <ImgButtonComponent
               color="#ffffff"
               icon={ImgIcon.Arrow}
@@ -98,12 +77,7 @@ const SimpleAndAgileComponent: FC<SimpleAndAgileComponentProps> = () => {
             />
           </Col>
           <Col className={styles.imgCol} ref={ref}>
-            <img
-              src="/images/Slider_VER2.svg"
-              alt="Tecnología Inteligente"
-              width={imgWidth}
-              height={imgHeight}
-            />
+            <SAImageComponent imgWidth={imgWidth} imgHeight={imgHeight} />
           </Col>
         </MDWrapperComponent>
       )}

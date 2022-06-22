@@ -7,6 +7,8 @@ import ImgButtonComponent, {
 import MDWrapperComponent, {
   WrappedModule,
 } from '../ModuleCommon/components/ModuleMDWrapperComponent/MDWrapperComponent';
+import TEImageComponent from './components/TEImageComponent/TEImageComponent';
+import TEMessageComponent from './components/TEMessageComponent/TEMessageComponent';
 import styles from './TrustTheExperienceComponent.module.css';
 
 interface TrustTheExperienceComponentProps {}
@@ -50,28 +52,8 @@ const TrustTheExperienceComponent: FC<
             backgroundColor: '#f5f3ff',
           }}
         >
-          <img
-            src="/images/experiencia_ilustracion@2x.png"
-            alt="Tecnología Inteligente"
-            width={imgWidth}
-            height={imgHeight}
-            style={{ marginBottom: 32 }}
-          />
-          <div className={styles.descContainer}>
-            <h2 className={styles.h2}>Confía en la experiencia</h2>
-          </div>
-          <p className={styles.p}>
-            Detrás de Global Sales Partnership se encuentran{' '}
-            <span style={{ fontWeight: 'bold' }}>HABITANT y Walmeric</span>, dos
-            de las empresas más innovadoras en Performance y Ventas Digitales.
-          </p>
-          <img
-            src="/images/Frame.png"
-            alt="Tecnología Inteligente"
-            width="229px"
-            height="20px"
-            style={{ marginBottom: 32 }}
-          />
+          <TEImageComponent imgWidth={imgWidth} imgHeight={imgHeight} />
+          <TEMessageComponent />
           <ImgButtonComponent
             color="#1f0742"
             icon={ImgIcon.Arrow}
@@ -86,22 +68,7 @@ const TrustTheExperienceComponent: FC<
           backgroundColor={'#f5f3ff'}
         >
           <Col style={{ paddingTop: 8.5, paddingBottom: 8.5 }}>
-            <div className={styles.descContainer}>
-              <h2 className={styles.h2}>Confía en la experiencia</h2>
-            </div>
-            <p className={styles.p}>
-              Detrás de Global Sales Partnership se encuentran{' '}
-              <span style={{ fontWeight: 'bold' }}>HABITANT y Walmeric</span>,
-              dos de las empresas más innovadoras en Performance y Ventas
-              Digitales.
-            </p>
-            <img
-              src="/images/Frame.png"
-              alt="Tecnología Inteligente"
-              width="229px"
-              height="20px"
-              style={{ marginBottom: 32 }}
-            />
+            <TEMessageComponent />
             <ImgButtonComponent
               color="#1f0742"
               icon={ImgIcon.Arrow}
@@ -109,12 +76,7 @@ const TrustTheExperienceComponent: FC<
             />
           </Col>
           <Col className={styles.imgCol} ref={ref}>
-            <img
-              src="/images/ilustracion_experiencia@2x.png"
-              alt="Tecnología Inteligente"
-              width={imgWidth}
-              height={imgHeight}
-            />
+            <TEImageComponent imgWidth={imgWidth} imgHeight={imgHeight} />
           </Col>
         </MDWrapperComponent>
       )}
