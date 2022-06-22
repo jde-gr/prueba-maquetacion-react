@@ -7,6 +7,7 @@ import MDWrapperComponent, {
   WrappedModule,
 } from '../ModuleCommon/components/ModuleMDWrapperComponent/MDWrapperComponent';
 import styles from './BrandsComponent.module.css';
+import BMessageComponent from './components/BMessageComponent/BMessageComponent';
 
 interface BrandsComponentProps {}
 
@@ -55,19 +56,7 @@ const BrandsComponent: FC<BrandsComponentProps> = () => {
             backgroundColor: '#ffffff',
           }}
         >
-          <div className={styles.descContainer}>
-            <h3 className={styles.h3}>
-              Las marcas más destacadas confían en Global Sales Partnership
-            </h3>
-          </div>
-          <p className={styles.p}>
-            <span style={{ fontWeight: 'bold' }}>
-              Llevamos años ayudando a grandes empresas
-            </span>{' '}
-            a maximizar su impacto gracias a este modelo de Digital Marketing
-            basado en performance.
-          </p>
-
+          <BMessageComponent />
           <SimpleImageSlider
             width={imgWidth}
             height={imgHeight}
@@ -85,19 +74,7 @@ const BrandsComponent: FC<BrandsComponentProps> = () => {
           backgroundColor={'#ffffff'}
         >
           <Col md={{ span: 10, offset: 1 }} ref={ref}>
-            <div className={styles.descContainer}>
-              <h3 className={styles.h3}>
-                Las marcas más destacadas confían en nosotros
-              </h3>
-            </div>
-            <p className={styles.p}>
-              <span style={{ fontWeight: 'bold' }}>
-                Llevamos años ayudando a grandes empresas
-              </span>{' '}
-              a maximizar su impacto gracias a este modelo de Digital Marketing
-              basado en performance.
-            </p>
-
+            <BMessageComponent />
             <SimpleImageSlider
               width={imgWidth}
               height={imgHeight}

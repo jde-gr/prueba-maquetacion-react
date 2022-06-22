@@ -8,6 +8,9 @@ import MDWrapperComponent, {
 import PillButtonComponent, {
   PillIcon,
 } from '../ModuleCommon/components/PillButtonComponent/PillButtonComponent';
+import LTContactComponent from './components/LTContactComponent/LTContactComponent';
+import LTImageComponent from './components/LTImageComponent/LTImageComponent';
+import LTTitleComponent from './components/LTTitleComponent/LTTitleComponent';
 import styles from './LetUsTalkComponent.module.css';
 
 interface LetUsTalkComponentProps {}
@@ -49,19 +52,8 @@ const LetUsTalkComponent: FC<LetUsTalkComponentProps> = () => {
           }}
           className={`${styles.container} ${styles.letUsTalkComponent}`}
         >
-          <img
-            src="/images/envelope.png"
-            alt="correo"
-            width="65px"
-            height="65px"
-          />
-          <div className={styles.headers}>
-            <h4 className={styles.h4}>¡Hablemos!</h4>
-            <h6 className={styles.h6}>
-              <span style={{ fontWeight: 'bold' }}>¿Tienes un reto</span> en el
-              que quieres que te acompañemos?
-            </h6>
-          </div>
+          <LTImageComponent />
+          <LTTitleComponent />
           <PillButtonComponent
             containerWidth={`${containerWidth}px`}
             contentWidth={`${contentWidth}px`}
@@ -70,18 +62,7 @@ const LetUsTalkComponent: FC<LetUsTalkComponentProps> = () => {
             centerText={true}
             icon={PillIcon.Send}
           />
-          <div className={styles.textsWrapper}>
-            <p className={styles.p}>
-              O si prefieres,{' '}
-              <span style={{ fontWeight: 'bold' }}>envíanos un mail</span> y te
-              contestaremos lo antes posible.
-            </p>
-            <p className={styles.email}>
-              <a href="mailto:business@globalsalespartnership.com">
-                business@globalsalespartnership.com
-              </a>
-            </p>
-          </div>
+          <LTContactComponent />
         </div>
       ) : (
         <MDWrapperComponent
@@ -95,19 +76,8 @@ const LetUsTalkComponent: FC<LetUsTalkComponentProps> = () => {
             ref={ref}
             className={styles.container}
           >
-            <img
-              src="/images/envelope.png"
-              alt="correo"
-              width="65px"
-              height="65px"
-            />
-            <div className={styles.headers}>
-              <h4 className={styles.h4}>¡Hablemos!</h4>
-              <h6 className={styles.h6}>
-                <span style={{ fontWeight: 'bold' }}>¿Tienes un reto</span> en
-                el que quieres que te acompañemos?
-              </h6>
-            </div>
+            <LTImageComponent />
+            <LTTitleComponent />
             <PillButtonComponent
               containerWidth={`${containerWidth}px`}
               contentWidth={`${contentWidth}px`}
@@ -116,18 +86,7 @@ const LetUsTalkComponent: FC<LetUsTalkComponentProps> = () => {
               centerText={true}
               icon={PillIcon.Send}
             />
-            <div className={styles.textsWrapper}>
-              <p className={styles.p}>
-                O si prefieres,{' '}
-                <span style={{ fontWeight: 'bold' }}>envíanos un mail</span>y te
-                contestaremos lo antes posible.
-              </p>
-              <p className={styles.email}>
-                <a href="mailto:business@globalsalespartnership.com">
-                  business@globalsalespartnership.com
-                </a>
-              </p>
-            </div>
+            <LTContactComponent />
           </Col>
         </MDWrapperComponent>
       )}
