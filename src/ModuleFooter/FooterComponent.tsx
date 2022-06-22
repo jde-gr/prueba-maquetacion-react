@@ -2,6 +2,10 @@ import React, { FC, useEffect, useState, useContext } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import LogoComponent from '../ModuleMenu/components/LogoComponent/LogoComponent';
 import FormContext from '../store/FormContext';
+import CopyRightComponent from './components/CopyRightComponent/CopyRightComponent';
+import FooterLogoComponent from './components/FooterLogoComponent/FooterLogoComponent';
+import FooterMenuComponent from './components/FooterMenuComponent/FooterMenuComponent';
+import PartnershipsComponent from './components/PartnershipsComponent/PartnershipsComponent';
 import styles from './FooterComponent.module.css';
 
 interface FooterComponentProps {}
@@ -44,49 +48,14 @@ const FooterComponent: FC<FooterComponentProps> = () => {
           }}
           className={`${styles.footer}`}
         >
-          <div style={{ width: '100%', overflowX: 'hidden', marginBottom: 32 }}>
-            <img
-              src="/images/partnerships.png"
-              alt="Partnerships"
-              width={imgSMWidth}
-              height={imgSMHeight}
-            />
-          </div>
-          <div className={styles.menuSMWrapper}>
-            <a href="/">Inicio</a>
-            <a href="/">Nuestro modelo</a>
-            <a href="/">¿Cómo lo hacemos?</a>
-            <a href="/">Herramientas tecnológicas</a>
-            <a href="/">Casos de éxito</a>
-            <a href="/">¿Quiénes somos?</a>
-          </div>
-          <div className={styles.logoSMWrapper}>
-            <div className={styles.logoSMDiv}>
-              <a href="/">
-                <img
-                  src="/images/Logo_BW_Small.svg"
-                  alt="global sales partnership®"
-                  style={{ width: 111, height: 28 }}
-                />
-              </a>
-              <div className={styles.privacyPolicyDiv}>
-                <a href="/">Términos y privacidad</a>
-                <a href="/">Política de cookies</a>
-              </div>
-            </div>
-          </div>
-          <div
-            className={`${styles.copyRightDiv} ${styles.copyRightSMPadding}`}
-          >
-            <p className={styles.address}>
-              GSP® | Cristóbal Bordiú, 13, Madrid
-            </p>
-            <div className={styles.langContainer}>
-              <p>
-                <a href="/">ENG</a>
-              </p>
-            </div>
-          </div>
+          <PartnershipsComponent
+            marginBottom={32}
+            imgWidth={imgSMWidth}
+            imgHeight={imgSMHeight}
+          />
+          <FooterMenuComponent />
+          <FooterLogoComponent />
+          <CopyRightComponent />
         </div>
       ) : (
         <div className={styles.footer} style={{ backgroundColor: 'white' }}>
@@ -100,68 +69,17 @@ const FooterComponent: FC<FooterComponentProps> = () => {
                 paddingBottom: 12,
               }}
             >
-              {/* <Col
-              xs={12}
-              className={styles.container}
-              style={{
-                paddingTop: 64,
-                paddingBottom: 12,
-              }}
-            > */}
               <Row>
                 <Col>
-                  <div
-                    style={{
-                      width: '100%',
-                      overflowX: 'hidden',
-                      marginBottom: 40,
-                    }}
-                  >
-                    <img
-                      src="/images/partnerships.png"
-                      alt="Partnerships"
-                      width={imgMDWidth}
-                      height={imgMDHeight}
-                    />
-                  </div>
-                  <div className={styles.menuWrapper}>
-                    <div className={styles.menuDiv}>
-                      <div className={styles.menuColumn}>
-                        <a href="/">Inicio</a>
-                        <a href="/">Nuestro modelo</a>
-                      </div>
-                      <div className={styles.menuColumn}>
-                        <a href="/">¿Cómo lo hacemos?</a>
-                        <a href="/">Herramientas tecnológicas</a>
-                      </div>
-                      <div className={styles.menuColumn}>
-                        <a href="/">Casos de éxito</a>
-                        <a href="/">¿Quiénes somos?</a>
-                      </div>
-                    </div>
-                  </div>
+                  <PartnershipsComponent
+                    marginBottom={40}
+                    imgWidth={imgMDWidth}
+                    imgHeight={imgMDHeight}
+                  />
+                  <FooterMenuComponent />
                   <div className={styles.footerBottomWrapper}>
-                    <div className={styles.footerLogoWrapper}>
-                      <div className={styles.footerLogoDiv}>
-                        <a href="/">
-                          <LogoComponent whiteText={false} />
-                        </a>
-                        <div className={styles.privacyPolicyDiv}>
-                          <a href="/">Términos y privacidad</a>
-                          <a href="/">Política de cookies</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className={styles.copyRightDiv}>
-                      <p className={styles.address}>
-                        GSP® | Cristóbal Bordiú, 13, Madrid
-                      </p>
-                      <div className={styles.langContainer}>
-                        <p>
-                          <a href="/">ENG</a>
-                        </p>
-                      </div>
-                    </div>
+                    <FooterLogoComponent />
+                    <CopyRightComponent />
                   </div>
                 </Col>
               </Row>

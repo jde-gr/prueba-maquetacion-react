@@ -1,0 +1,61 @@
+.logoSMWrapper {
+  width: 100%;
+  border-top: 1px solid #8881b4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 0px;
+}
+
+.logoSMDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+}
+
+.privacyPolicyDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0px;
+  gap: 8px;
+}
+
+.privacyPolicyDiv a {
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #8881b4;
+}
+
+.footerLogoWrapper {
+  width: 100%;
+  border-top: 1px solid #8881b4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+}
+
+.footerLogoDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+  margin: 32px 0;
+}
