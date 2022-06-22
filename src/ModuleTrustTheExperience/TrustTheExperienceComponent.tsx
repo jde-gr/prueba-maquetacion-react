@@ -1,7 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import { Col } from 'react-bootstrap';
 import { useMeasure } from 'react-use';
-import Arrow from '../ModuleCommon/components/Arrow/Arrow';
 import ImgButtonComponent, {
   ImgIcon,
 } from '../ModuleCommon/components/ImgButtonComponent/ImgButtonComponent';

@@ -1,18 +1,9 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { FC } from 'react';
 import styles from './CopyRightComponent.module.css';
 
 interface CopyRightComponentProps {}
 
 const CopyRightComponent: FC<CopyRightComponentProps> = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const breakPoint = 768; // md
-
-  useEffect(() => {
-    const handleWindowResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleWindowResize);
-
-    return () => window.removeEventListener('resize', handleWindowResize);
-  }, []);
   return (
     <div
       className={`${styles.copyRightDiv} {windowWidth < breakPoint && ${styles.copyRightSMPadding}}`}

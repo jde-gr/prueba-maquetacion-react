@@ -61,7 +61,6 @@
   flex: none;
   order: 2;
   flex-grow: 0;
-  transform: rotate(90deg);
   margin: 114px 0 32px 0;
   display: flex;
 }
