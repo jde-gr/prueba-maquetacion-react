@@ -1,6 +1,5 @@
 import React, { FC, useEffect, useState, useContext } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import LogoComponent from '../ModuleMenu/components/LogoComponent/LogoComponent';
 import FormContext from '../store/FormContext';
 import CopyRightComponent from './components/CopyRightComponent/CopyRightComponent';
 import FooterLogoComponent from './components/FooterLogoComponent/FooterLogoComponent';
