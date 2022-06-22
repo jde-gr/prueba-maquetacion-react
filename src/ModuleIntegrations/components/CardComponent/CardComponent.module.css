@@ -48,8 +48,32 @@
   color: #6c30eb;
 }
 
+@media screen and (max-width: 991px) {
+  .cardH2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .cardP {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .card {
     margin-bottom: 12px;
+  }
+
+  .cardH2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .cardP {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
   }
 }

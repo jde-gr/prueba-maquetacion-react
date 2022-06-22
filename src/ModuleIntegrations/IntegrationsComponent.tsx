@@ -77,7 +77,7 @@ const IntegrationsComponent: FC<IntegrationsComponentProps> = () => {
           wrappedModule={WrappedModule.None}
           backgroundColor={'white'}
         >
-          <Col>
+          <Col md={6}>
             <H2DivComponent style={{ height: wrapperHeight }} />
             <CardComponent
               iconSrc="/icons/icon_def_est.svg"
@@ -95,7 +95,7 @@ const IntegrationsComponent: FC<IntegrationsComponentProps> = () => {
               paragraph="Gestión completa del lead y trazabilidad del mismo hasta el cierre de la venta con una tecnología única."
             />
           </Col>
-          <Col>
+          <Col md={6}>
             <div style={{ paddingBottom: paddingBottom }} ref={ref}>
               <ParagraphComponent />
             </div>
