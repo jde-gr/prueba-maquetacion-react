@@ -2,6 +2,9 @@ import React, { FC, useEffect, useState } from 'react';
 import { Col } from 'react-bootstrap';
 import { useMeasure } from 'react-use';
 import Arrow from '../ModuleCommon/components/Arrow/Arrow';
+import ImgButtonComponent, {
+  ImgIcon,
+} from '../ModuleCommon/components/ImgButtonComponent/ImgButtonComponent';
 import MDWrapperComponent, {
   WrappedModule,
 } from '../ModuleCommon/components/ModuleMDWrapperComponent/MDWrapperComponent';
@@ -70,10 +73,11 @@ const TrustTheExperienceComponent: FC<
             height="20px"
             style={{ marginBottom: 32 }}
           />
-          <div className={styles.buttonContent}>
-            <p className={styles.buttonText}>Descubre quiénes somos</p>
-            <Arrow />
-          </div>
+          <ImgButtonComponent
+            color="#1f0742"
+            icon={ImgIcon.Arrow}
+            text="Descubre quiénes somos"
+          />
         </div>
       ) : (
         <MDWrapperComponent
@@ -99,10 +103,11 @@ const TrustTheExperienceComponent: FC<
               height="20px"
               style={{ marginBottom: 32 }}
             />
-            <div className={styles.buttonContent}>
-              <p className={styles.buttonText}>Descubre quiénes somos</p>
-              <Arrow />
-            </div>
+            <ImgButtonComponent
+              color="#1f0742"
+              icon={ImgIcon.Arrow}
+              text="Descubre quiénes somos"
+            />
           </Col>
           <Col className={styles.imgCol} ref={ref}>
             <img

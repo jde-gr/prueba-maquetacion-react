@@ -16,24 +16,14 @@ interface PillButtonComponentProps {
   icon?: PillIcon;
 }
 
-const defaultProps: PillButtonComponentProps = {
-  buttonText: '',
-  containerWidth: '274px',
-  contentWidth: '226px',
-  hasIcon: false,
-  centerText: false,
-  icon: PillIcon.KeyboardArrowUp,
-};
-
-const PillButtonComponent: FC<PillButtonComponentProps> = (props) => {
-  const {
-    buttonText,
-    containerWidth,
-    contentWidth,
-    hasIcon,
-    centerText,
-    icon,
-  } = props;
+const PillButtonComponent: FC<PillButtonComponentProps> = ({
+  buttonText = '',
+  containerWidth = '274px',
+  contentWidth = '226px',
+  hasIcon = false,
+  centerText = false,
+  icon = PillIcon.KeyboardArrowUp,
+}) => {
   return (
     <div className={styles.container} style={{ width: containerWidth }}>
       <div className={styles.buttonContent} style={{ width: contentWidth }}>
@@ -53,7 +43,5 @@ const PillButtonComponent: FC<PillButtonComponentProps> = (props) => {
     </div>
   );
 };
-
-PillButtonComponent.defaultProps = defaultProps;
 
 export default PillButtonComponent;

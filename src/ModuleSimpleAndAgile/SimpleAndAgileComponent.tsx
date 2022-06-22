@@ -2,6 +2,9 @@ import React, { FC, useEffect, useState } from 'react';
 import { Col } from 'react-bootstrap';
 import { useMeasure } from 'react-use';
 import Arrow from '../ModuleCommon/components/Arrow/Arrow';
+import ImgButtonComponent, {
+  ImgIcon,
+} from '../ModuleCommon/components/ImgButtonComponent/ImgButtonComponent';
 import MDWrapperComponent, {
   WrappedModule,
 } from '../ModuleCommon/components/ModuleMDWrapperComponent/MDWrapperComponent';
@@ -64,10 +67,11 @@ const SimpleAndAgileComponent: FC<SimpleAndAgileComponentProps> = () => {
             </span>{' '}
             Si no vendemos, no cobramos.
           </p>
-          <div className={styles.buttonContent}>
-            <p className={styles.buttonText}>¿Nos cuentas tu proyecto?</p>
-            <Arrow />
-          </div>
+          <ImgButtonComponent
+            color="#ffffff"
+            icon={ImgIcon.Arrow}
+            text="¿Nos cuentas tu proyecto?"
+          />
         </div>
       ) : (
         <MDWrapperComponent
@@ -88,10 +92,11 @@ const SimpleAndAgileComponent: FC<SimpleAndAgileComponentProps> = () => {
               </span>{' '}
               Si no vendemos, no cobramos.
             </p>
-            <div className={styles.buttonContent}>
-              <p className={styles.buttonText}>¿Nos cuentas tu proyecto?</p>
-              <Arrow />
-            </div>
+            <ImgButtonComponent
+              color="#ffffff"
+              icon={ImgIcon.Arrow}
+              text="¿Nos cuentas tu proyecto?"
+            />
           </Col>
           <Col className={styles.imgCol} ref={ref}>
             <img

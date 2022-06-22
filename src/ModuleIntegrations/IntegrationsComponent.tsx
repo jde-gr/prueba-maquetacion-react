@@ -1,7 +1,9 @@
 import React, { FC, useEffect, useState } from 'react';
 import { Col } from 'react-bootstrap';
 import { useMeasure } from 'react-use';
-import Arrow from '../ModuleCommon/components/Arrow/Arrow';
+import ImgButtonComponent, {
+  ImgIcon,
+} from '../ModuleCommon/components/ImgButtonComponent/ImgButtonComponent';
 
 import MDWrapperComponent, {
   WrappedModule,
@@ -62,10 +64,11 @@ const IntegrationsComponent: FC<IntegrationsComponentProps> = () => {
             title="Tecnología lead management"
             paragraph="Gestión completa del lead y trazabilidad del mismo hasta el cierre de la venta con una tecnología única."
           />
-          <div className={styles.buttonContent}>
-            <p className={styles.buttonText}>Descubre más</p>
-            <Arrow />
-          </div>
+          <ImgButtonComponent
+            color="#1f0742"
+            icon={ImgIcon.Arrow}
+            text="Descubre más"
+          />
         </Col>
       ) : (
         <MDWrapperComponent

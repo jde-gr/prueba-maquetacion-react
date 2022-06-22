@@ -2,6 +2,9 @@ import React, { FC, useEffect, useState } from 'react';
 import { Col } from 'react-bootstrap';
 import { useMeasure } from 'react-use';
 import Arrow from '../ModuleCommon/components/Arrow/Arrow';
+import ImgButtonComponent, {
+  ImgIcon,
+} from '../ModuleCommon/components/ImgButtonComponent/ImgButtonComponent';
 import MDWrapperComponent, {
   WrappedModule,
 } from '../ModuleCommon/components/ModuleMDWrapperComponent/MDWrapperComponent';
@@ -60,10 +63,11 @@ const IntelligentTechComponent: FC<IntelligentTechComponentProps> = () => {
             los creadores de la tecnología más implementada y avanzada en la
             gestión de Leads y cierre de ventas.
           </p>
-          <div className={styles.buttonContent}>
-            <p className={styles.buttonText}>Conócela</p>
-            <Arrow />
-          </div>
+          <ImgButtonComponent
+            color="#1f0742"
+            icon={ImgIcon.Arrow}
+            text="Conócela"
+          />
         </div>
       ) : (
         <MDWrapperComponent
@@ -83,10 +87,11 @@ const IntelligentTechComponent: FC<IntelligentTechComponentProps> = () => {
               Somos los creadores de la tecnología más implementada y avanzada
               en la gestión de Leads y cierre de ventas.
             </p>
-            <div className={styles.buttonContent}>
-              <p className={styles.buttonText}>Conócelas</p>
-              <Arrow />
-            </div>
+            <ImgButtonComponent
+              color="#1f0742"
+              icon={ImgIcon.Arrow}
+              text="Conócelas"
+            />
           </Col>
           <Col className={styles.imgCol} ref={ref}>
             <img

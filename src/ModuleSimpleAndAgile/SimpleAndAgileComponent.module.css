@@ -24,29 +24,6 @@
   margin-bottom: 20px;
 }
 
-.buttonContent {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding: 0px;
-  padding-top: 12px;
-  gap: 8px;
-  cursor: pointer;
-}
-
-.buttonText {
-  font-family: 'Stolzl';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  padding-top: 4px;
-}
-
 .imgCol {
   display: flex;
   flex-direction: row;

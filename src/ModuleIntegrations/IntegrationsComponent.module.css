@@ -10,27 +10,4 @@
   .container {
     padding: 64px 20px 64px 25px;
   }
-
-  .buttonContent {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 0px;
-    padding-top: 12px;
-    gap: 8px;
-    cursor: pointer;
-  }
-
-  .buttonText {
-    font-family: 'Stolzl';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.04em;
-    color: #1f0742;
-    padding-top: 4px;
-  }
 }
