@@ -6,7 +6,6 @@ import { useMeasure } from 'react-use';
 import MDWrapperComponent, {
   WrappedModule,
 } from '../ModuleCommon/components/ModuleMDWrapperComponent/MDWrapperComponent';
-import styles from './BrandsComponent.module.css';
 import BMessageComponent from './components/BMessageComponent/BMessageComponent';
 
 interface BrandsComponentProps {}
