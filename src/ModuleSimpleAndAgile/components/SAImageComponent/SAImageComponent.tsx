@@ -137,6 +137,8 @@ const SAImageComponent: FC<SAImageComponentProps> = (props) => {
                         src={activeId === value.id ? indActive : indDefault}
                         className="img-fluid rounded"
                         alt=""
+                        width={activeId === value.id ? 16 : 6}
+                        height={activeId === value.id ? 16 : 6}
                       />{' '}
                     </a>{' '}
                   </li>

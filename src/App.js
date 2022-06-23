@@ -1,5 +1,4 @@
-import React, { useState, useEffect, Suspense } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './styles.css';
@@ -14,7 +13,6 @@ import LetUsTalkComponent from './ModuleLetUsTalk/LetUsTalkComponent';
 import FooterComponent from './ModuleFooter/FooterComponent';
 import FormContext from './store/FormContext';
 import LayoutComponent from './components/LayoutComponent/LayoutComponent';
-import LoadingSpinnerComponent from './ModuleCommon/components/LoadingSpinnerComponent/LoadingSpinnerComponent';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);

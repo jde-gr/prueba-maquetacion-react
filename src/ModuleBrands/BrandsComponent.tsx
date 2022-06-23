@@ -1,12 +1,12 @@
 import React, { FC, useEffect, useState } from 'react';
 import { Col } from 'react-bootstrap';
-import SimpleImageSlider from 'react-simple-image-slider';
 import { useMeasure } from 'react-use';
 
 import MDWrapperComponent, {
   WrappedModule,
 } from '../ModuleCommon/components/ModuleMDWrapperComponent/MDWrapperComponent';
 import BMessageComponent from './components/BMessageComponent/BMessageComponent';
+import BCarouselComponent from './components/BCarouselComponent/BCarouselComponent';
 
 interface BrandsComponentProps {}
 
@@ -25,16 +25,6 @@ const BrandsComponent: FC<BrandsComponentProps> = () => {
     windowWidth < breakPoint ? windowWidth - smPR - smPL : width * 0.88;
   const imgHeight =
     windowWidth < breakPoint ? (imgWidth * 168) / 296 : (imgWidth * 112) / 536;
-
-  const imagesMD = [
-    { url: '/images/brands_1.svg' },
-    { url: '/images/brands_2.svg' },
-  ];
-
-  const imagesSM = [
-    { url: '/images/brands_1_sm.png' },
-    { url: '/images/brands_2_sm.png' },
-  ];
 
   useEffect(() => {
     const handleWindowResize = () => setWindowWidth(window.innerWidth);
@@ -57,14 +47,18 @@ const BrandsComponent: FC<BrandsComponentProps> = () => {
           }}
         >
           <BMessageComponent />
-          <SimpleImageSlider
-            width={imgWidth}
-            height={imgHeight}
-            images={imagesSM}
-            showBullets={true}
-            showNavs={false}
-            style={{ backgroundColor: '#fff' }}
-          />
+          <div>
+            <div
+              className="container"
+              style={
+                windowWidth < breakPoint
+                  ? { maxWidth: 'unset', padding: 0 }
+                  : { padding: 0 }
+              }
+            >
+              <BCarouselComponent imgWidth={imgWidth} imgHeight={imgHeight} />
+            </div>
+          </div>
         </div>
       ) : (
         <div id="brands">
@@ -76,14 +70,7 @@ const BrandsComponent: FC<BrandsComponentProps> = () => {
           >
             <Col md={{ span: 10, offset: 1 }} ref={ref}>
               <BMessageComponent />
-              <SimpleImageSlider
-                width={imgWidth}
-                height={imgHeight}
-                images={imagesMD}
-                showBullets={true}
-                showNavs={false}
-                style={{ backgroundColor: '#fff', margin: 'auto' }}
-              />
+              <BCarouselComponent imgWidth={imgWidth} imgHeight={imgHeight} />
             </Col>
           </MDWrapperComponent>
         </div>
