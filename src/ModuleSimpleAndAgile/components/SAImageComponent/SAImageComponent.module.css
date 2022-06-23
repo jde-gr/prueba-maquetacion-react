@@ -1,0 +1,33 @@
+.container {
+  padding: 0 !important;
+}
+
+.carousel-inner img {
+  width: 100%;
+}
+
+.simpleAndAgileCarousel .carousel-indicators.list-inline {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+}
+.simpleAndAgileCarousel .carousel-indicators > li {
+  width: 100px;
+}
+.simpleAndAgileCarousel .carousel-indicators > li a,
+.a {
+  background-color: transparent !important;
+}
+.simpleAndAgileCarousel .carousel-indicators li img,
+.a img {
+  opacity: 1;
+  src: '../../../components/images/SimpleAndAgileSlider/md/bullets/simple_and_agile_slider_md_default_bullet.png';
+}
+.simpleAndAgileCarousel .carousel-indicators li.active img,
+.active img {
+  opacity: 1;
+  src: '../../../components/images/SimpleAndAgileSlider/md/bullets/simple_and_agile_slider_md_active_bullet.png';
+}
+
+@media screen and (max-width: 767px) {
+}
