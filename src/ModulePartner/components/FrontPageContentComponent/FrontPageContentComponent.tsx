@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { Col, Row } from 'react-bootstrap';
+import { HashLink } from 'react-router-hash-link';
 
 import Arrow from '../../../ModuleCommon/components/Arrow/Arrow';
 import FormComponent from '../../../ModuleForm/FormComponent';
@@ -41,9 +42,11 @@ const FrontPageContentComponent: FC<FrontPageContentComponentProps> = ({
             alt="powered by HABITANT & walmeric"
           />
         </div>
-        <div className={styles.arrowScroll}>
-          <Arrow down={true} />
-        </div>
+        <HashLink to="/#digital-sales">
+          <div className={styles.arrowScroll}>
+            <Arrow down={true} />
+          </div>
+        </HashLink>
       </Col>
       <Col xs={12} md={7} className={styles.imageColumn}>
         <div className={styles.imageContainer}>

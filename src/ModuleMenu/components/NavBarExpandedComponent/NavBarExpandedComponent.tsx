@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { NavHashLink as Link } from 'react-router-hash-link';
 
 import PillButtonComponent, {
   PillIcon,
@@ -12,26 +13,26 @@ const NavBarExpandedComponent: FC<NavBarExpandedComponentProps> = () => {
     <div className={styles.navigationMenu}>
       <ul>
         <li>
-          <a href="/">Inicio</a>
+          <Link to="/">Inicio</Link>
         </li>
         <li>
-          <a href="/">Nuestro modelo</a>
+          <Link to="/#digital-sales">Nuestro modelo</Link>
           <span>Descubre las ventajas de Global Sales Partnership</span>
         </li>
         <li>
-          <a href="/">¿Cómo lo hacemos?</a>
+          <Link to="/#simple-and-agile">¿Cómo lo hacemos?</Link>
           <span>Recursos y metodología adaptada a tus objetivos</span>
         </li>
         <li>
-          <a href="/">Tecnologías</a>
+          <Link to="/#intelligent-tech">Tecnologías</Link>
           <span>Inteligencia de negocio a tu servicio</span>
         </li>
         <li>
-          <a href="/">Casos de éxito</a>
+          <Link to="/#brands">Casos de éxito</Link>
           <span>Así hemos ayudado a otras empresas</span>
         </li>
         <li>
-          <a href="/">¿Quiénes somos?</a>
+          <Link to="/#trust-the-experience">¿Quiénes somos?</Link>
           <span>HABITANT y Walmeric. La experiencia nos avala</span>
         </li>
       </ul>
@@ -47,17 +48,17 @@ const NavBarExpandedComponent: FC<NavBarExpandedComponentProps> = () => {
       <div className={styles.emailContainer}>
         <p className={styles.pThin}>¿Prefieres escribirnos directamente?</p>
         <p className={styles.pBold}>
-          <a href="business@globalsalespartnership.com">
+          <a href="mailto:business@globalsalespartnership.com">
             business@globalsalespartnership.com
           </a>
         </p>
       </div>
       <div className={styles.langContainer}>
         <p className={styles.active}>
-          <a href="/">ESP</a>
+          <Link to="/">ESP</Link>
         </p>
         <p>
-          <a href="/">ENG</a>
+          <Link to="/">ENG</Link>
         </p>
       </div>
     </div>

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './styles.css';
-import NavComponent from './ModuleMenu/components/NavComponent/NavComponent';
 import PartnerComponent from './ModulePartner/PartnerComponent';
 import DigitalSalesComponent from './ModuleDigitalSales/DigitalSalesComponent';
 import IntegrationsComponent from './ModuleIntegrations/IntegrationsComponent';
@@ -13,6 +13,8 @@ import BrandsComponent from './ModuleBrands/BrandsComponent';
 import LetUsTalkComponent from './ModuleLetUsTalk/LetUsTalkComponent';
 import FooterComponent from './ModuleFooter/FooterComponent';
 import FormContext from './store/FormContext';
+import LayoutComponent from './components/LayoutComponent/LayoutComponent';
+import LoadingSpinnerComponent from './ModuleCommon/components/LoadingSpinnerComponent/LoadingSpinnerComponent';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,8 +43,7 @@ function App() {
         isOpen: isOpen,
       }}
     >
-      <div>
-        <NavComponent />
+      <LayoutComponent>
         <PartnerComponent
           onFormOpen={openFormHandler}
           onFormClose={closeFormHandler}
@@ -55,7 +56,7 @@ function App() {
         <BrandsComponent />
         <LetUsTalkComponent />
         <FooterComponent />
-      </div>
+      </LayoutComponent>
     </FormContext.Provider>
   );
 }

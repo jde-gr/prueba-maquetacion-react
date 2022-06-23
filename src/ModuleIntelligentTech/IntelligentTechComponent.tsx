@@ -40,6 +40,7 @@ const IntelligentTechComponent: FC<IntelligentTechComponentProps> = () => {
     <>
       {windowWidth < breakPoint ? (
         <div
+          id="intelligent-tech"
           style={{
             paddingTop: smPT,
             paddingRight: smPR,
@@ -63,29 +64,31 @@ const IntelligentTechComponent: FC<IntelligentTechComponentProps> = () => {
           />
         </div>
       ) : (
-        <MDWrapperComponent
-          paddingBottom={104}
-          paddingTop={104}
-          wrappedModule={WrappedModule.None}
-          backgroundColor={'#00eac5'}
-        >
-          <Col style={{ paddingTop: 8.5, paddingBottom: 8.5 }}>
-            <ITMessageComponent />
-            <ImgButtonComponent
-              color="#1f0742"
-              icon={ImgIcon.Arrow}
-              text="Conócelas"
-            />
-          </Col>
-          <Col className={styles.imgCol} ref={ref}>
-            <img
-              src="/images/ilustracion_tecnologia_inteligente.png"
-              alt="Tecnología Inteligente"
-              width={imgWidth}
-              height={imgHeight}
-            />
-          </Col>
-        </MDWrapperComponent>
+        <div id="intelligent-tech">
+          <MDWrapperComponent
+            paddingBottom={104}
+            paddingTop={104}
+            wrappedModule={WrappedModule.None}
+            backgroundColor={'#00eac5'}
+          >
+            <Col style={{ paddingTop: 8.5, paddingBottom: 8.5 }}>
+              <ITMessageComponent />
+              <ImgButtonComponent
+                color="#1f0742"
+                icon={ImgIcon.Arrow}
+                text="Conócelas"
+              />
+            </Col>
+            <Col className={styles.imgCol} ref={ref}>
+              <img
+                src="/images/ilustracion_tecnologia_inteligente.png"
+                alt="Tecnología Inteligente"
+                width={imgWidth}
+                height={imgHeight}
+              />
+            </Col>
+          </MDWrapperComponent>
+        </div>
       )}
     </>
   );

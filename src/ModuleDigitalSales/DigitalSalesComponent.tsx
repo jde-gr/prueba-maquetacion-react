@@ -24,27 +24,29 @@ const DigitalSalesComponent: FC<DigitalSalesComponentProps> = () => {
   return (
     <>
       {width < breakPoint ? (
-        <div className={styles.moduleDigitalSales}>
+        <div id="digital-sales" className={styles.moduleDigitalSales}>
           <Col className={styles.container}>
             <DSMessageComponent />
             <DSAdvantagesComponent />
           </Col>
         </div>
       ) : (
-        <MDWrapperComponent
-          paddingBottom={104}
-          paddingTop={104}
-          wrappedModule={WrappedModule.ModuleDigitalSales}
-          backgroundColor={'#370087'}
-        >
-          <Col>
-            <DSMessageComponent />
-          </Col>
-          <Col md={1} lg={2}></Col>
-          <Col>
-            <DSAdvantagesComponent />
-          </Col>
-        </MDWrapperComponent>
+        <div id="digital-sales">
+          <MDWrapperComponent
+            paddingBottom={104}
+            paddingTop={104}
+            wrappedModule={WrappedModule.ModuleDigitalSales}
+            backgroundColor={'#370087'}
+          >
+            <Col>
+              <DSMessageComponent />
+            </Col>
+            <Col md={1} lg={2}></Col>
+            <Col>
+              <DSAdvantagesComponent />
+            </Col>
+          </MDWrapperComponent>
+        </div>
       )}
     </>
   );

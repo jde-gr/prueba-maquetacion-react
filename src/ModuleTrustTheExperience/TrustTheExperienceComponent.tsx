@@ -44,6 +44,7 @@ const TrustTheExperienceComponent: FC<
     <>
       {windowWidth < breakPoint ? (
         <div
+          id="trust-the-experience"
           style={{
             paddingTop: smPT,
             paddingRight: smPR,
@@ -61,24 +62,26 @@ const TrustTheExperienceComponent: FC<
           />
         </div>
       ) : (
-        <MDWrapperComponent
-          paddingBottom={104}
-          paddingTop={104}
-          wrappedModule={WrappedModule.None}
-          backgroundColor={'#f5f3ff'}
-        >
-          <Col style={{ paddingTop: 8.5, paddingBottom: 8.5 }}>
-            <TEMessageComponent />
-            <ImgButtonComponent
-              color="#1f0742"
-              icon={ImgIcon.Arrow}
-              text="Descubre quiénes somos"
-            />
-          </Col>
-          <Col className={styles.imgCol} ref={ref}>
-            <TEImageComponent imgWidth={imgWidth} imgHeight={imgHeight} />
-          </Col>
-        </MDWrapperComponent>
+        <div id="trust-the-experience">
+          <MDWrapperComponent
+            paddingBottom={104}
+            paddingTop={104}
+            wrappedModule={WrappedModule.None}
+            backgroundColor={'#f5f3ff'}
+          >
+            <Col style={{ paddingTop: 8.5, paddingBottom: 8.5 }}>
+              <TEMessageComponent />
+              <ImgButtonComponent
+                color="#1f0742"
+                icon={ImgIcon.Arrow}
+                text="Descubre quiénes somos"
+              />
+            </Col>
+            <Col className={styles.imgCol} ref={ref}>
+              <TEImageComponent imgWidth={imgWidth} imgHeight={imgHeight} />
+            </Col>
+          </MDWrapperComponent>
+        </div>
       )}
     </>
   );

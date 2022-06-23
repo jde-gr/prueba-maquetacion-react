@@ -43,6 +43,7 @@ const SimpleAndAgileComponent: FC<SimpleAndAgileComponentProps> = () => {
     <>
       {windowWidth < breakPoint ? (
         <div
+          id="simple-and-agile"
           style={{
             paddingTop: smPT,
             paddingRight: smPR,
@@ -61,25 +62,27 @@ const SimpleAndAgileComponent: FC<SimpleAndAgileComponentProps> = () => {
           />
         </div>
       ) : (
-        <MDWrapperComponent
-          paddingBottom={104}
-          paddingTop={104}
-          wrappedModule={WrappedModule.ModuleSimpleAndAgile}
-          backgroundColor={'#6c30eb'}
-        >
-          <Col style={{ paddingTop: 8.5, paddingBottom: 8.5 }}>
-            <SATitleComponent />
-            <SAParagraphComponent />
-            <ImgButtonComponent
-              color="#ffffff"
-              icon={ImgIcon.Arrow}
-              text="¿Nos cuentas tu proyecto?"
-            />
-          </Col>
-          <Col className={styles.imgCol} ref={ref}>
-            <SAImageComponent imgWidth={imgWidth} imgHeight={imgHeight} />
-          </Col>
-        </MDWrapperComponent>
+        <div id="simple-and-agile">
+          <MDWrapperComponent
+            paddingBottom={104}
+            paddingTop={104}
+            wrappedModule={WrappedModule.ModuleSimpleAndAgile}
+            backgroundColor={'#6c30eb'}
+          >
+            <Col style={{ paddingTop: 8.5, paddingBottom: 8.5 }}>
+              <SATitleComponent />
+              <SAParagraphComponent />
+              <ImgButtonComponent
+                color="#ffffff"
+                icon={ImgIcon.Arrow}
+                text="¿Nos cuentas tu proyecto?"
+              />
+            </Col>
+            <Col className={styles.imgCol} ref={ref}>
+              <SAImageComponent imgWidth={imgWidth} imgHeight={imgHeight} />
+            </Col>
+          </MDWrapperComponent>
+        </div>
       )}
     </>
   );

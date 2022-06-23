@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { NavHashLink as Link } from 'react-router-hash-link';
 import styles from './NavBarComponent.module.css';
 
 interface NavBarComponentProps {
@@ -18,22 +19,22 @@ const NavBarComponent: FC<NavBarComponentProps> = (props) => {
     >
       <ul className={styles.navBar}>
         <li>
-          <a href="/">Inicio</a>
+          <Link to="/">Inicio</Link>
         </li>
         <li>
-          <a href="/">Nuestro modelo</a>
+          <Link to="/#digital-sales">Nuestro modelo</Link>
         </li>
         <li>
-          <a href="/">Tecnologías</a>
+          <Link to="/#intelligent-tech">Tecnologías</Link>
         </li>
         <li>
-          <a href="/">Casos de éxito</a>
+          <Link to="/#brands">Casos de éxito</Link>
         </li>
         <li>
-          <a href="/">¿Cómo lo hacemos?</a>
+          <Link to="/#simple-and-agile">¿Cómo lo hacemos?</Link>
         </li>
         <li>
-          <a href="/">¿Quiénes somos?</a>
+          <Link to="/#trust-the-experience">¿Quiénes somos?</Link>
         </li>
       </ul>
     </div>

@@ -34,7 +34,7 @@ const IntegrationsComponent: FC<IntegrationsComponentProps> = () => {
   return (
     <>
       {width < breakPoint ? (
-        <Col className={styles.container}>
+        <Col id="integrations" className={styles.container}>
           <H2DivComponent />
           <div style={{ paddingBottom: paddingBottom }}>
             <ParagraphComponent />
@@ -71,46 +71,48 @@ const IntegrationsComponent: FC<IntegrationsComponentProps> = () => {
           />
         </Col>
       ) : (
-        <MDWrapperComponent
-          paddingBottom={104}
-          paddingTop={104}
-          wrappedModule={WrappedModule.None}
-          backgroundColor={'white'}
-        >
-          <Col md={6}>
-            <H2DivComponent style={{ height: wrapperHeight }} />
-            <CardComponent
-              iconSrc="/icons/icon_def_est.svg"
-              title="Definición estratégica"
-              paragraph="Establecemos de forma conjunta objetivos, necesidades y procesos."
-            />
-            <CardComponent
-              iconSrc="/icons/icon_cre.svg"
-              title="Creatividad"
-              paragraph="Creamos conceptos y mensajes orientados a conversión."
-            />
-            <CardComponent
-              iconSrc="/icons/icon_tec_lea_man.svg"
-              title="Tecnología lead management"
-              paragraph="Gestión completa del lead y trazabilidad del mismo hasta el cierre de la venta con una tecnología única."
-            />
-          </Col>
-          <Col md={6}>
-            <div style={{ paddingBottom: paddingBottom }} ref={ref}>
-              <ParagraphComponent />
-            </div>
-            <CardComponent
-              iconSrc="/icons/icon_can_dig.svg"
-              title="Canales digitales"
-              paragraph="Sin intermediarios. Invertimos,  gestionamos y activamos las campañas."
-            />
-            <CardComponent
-              iconSrc="/icons/icon_act_con.svg"
-              title="Activos de conversión"
-              paragraph="Diseñamos y desarrollamos los activos digitales necesarios para pasar del clic al lead/venta. "
-            />
-          </Col>
-        </MDWrapperComponent>
+        <div id="integrations">
+          <MDWrapperComponent
+            paddingBottom={104}
+            paddingTop={104}
+            wrappedModule={WrappedModule.None}
+            backgroundColor={'white'}
+          >
+            <Col md={6}>
+              <H2DivComponent style={{ height: wrapperHeight }} />
+              <CardComponent
+                iconSrc="/icons/icon_def_est.svg"
+                title="Definición estratégica"
+                paragraph="Establecemos de forma conjunta objetivos, necesidades y procesos."
+              />
+              <CardComponent
+                iconSrc="/icons/icon_cre.svg"
+                title="Creatividad"
+                paragraph="Creamos conceptos y mensajes orientados a conversión."
+              />
+              <CardComponent
+                iconSrc="/icons/icon_tec_lea_man.svg"
+                title="Tecnología lead management"
+                paragraph="Gestión completa del lead y trazabilidad del mismo hasta el cierre de la venta con una tecnología única."
+              />
+            </Col>
+            <Col md={6}>
+              <div style={{ paddingBottom: paddingBottom }} ref={ref}>
+                <ParagraphComponent />
+              </div>
+              <CardComponent
+                iconSrc="/icons/icon_can_dig.svg"
+                title="Canales digitales"
+                paragraph="Sin intermediarios. Invertimos,  gestionamos y activamos las campañas."
+              />
+              <CardComponent
+                iconSrc="/icons/icon_act_con.svg"
+                title="Activos de conversión"
+                paragraph="Diseñamos y desarrollamos los activos digitales necesarios para pasar del clic al lead/venta. "
+              />
+            </Col>
+          </MDWrapperComponent>
+        </div>
       )}
     </>
   );

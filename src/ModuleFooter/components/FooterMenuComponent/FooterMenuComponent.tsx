@@ -1,4 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
+import { NavHashLink as Link } from 'react-router-hash-link';
 import styles from './FooterMenuComponent.module.css';
 
 interface FooterMenuComponentProps {}
@@ -17,27 +18,27 @@ const FooterMenuComponent: FC<FooterMenuComponentProps> = () => {
     <>
       {windowWidth < breakPoint ? (
         <div className={styles.menuSMWrapper}>
-          <a href="/">Inicio</a>
-          <a href="/">Nuestro modelo</a>
-          <a href="/">¿Cómo lo hacemos?</a>
-          <a href="/">Herramientas tecnológicas</a>
-          <a href="/">Casos de éxito</a>
-          <a href="/">¿Quiénes somos?</a>
+          <Link to="/">Inicio</Link>
+          <Link to="/#digital-sales">Nuestro modelo</Link>
+          <Link to="/#simple-and-agile">¿Cómo lo hacemos?</Link>
+          <Link to="/#integrations">Herramientas tecnológicas</Link>
+          <Link to="/#brands">Casos de éxito</Link>
+          <Link to="/#trust-the-experience">¿Quiénes somos?</Link>
         </div>
       ) : (
         <div className={styles.menuWrapper}>
           <div className={styles.menuDiv}>
             <div className={styles.menuColumn}>
-              <a href="/">Inicio</a>
-              <a href="/">Nuestro modelo</a>
+              <Link to="#top">Inicio</Link>
+              <Link to="/#digital-sales">Nuestro modelo</Link>
             </div>
             <div className={styles.menuColumn}>
-              <a href="/">¿Cómo lo hacemos?</a>
-              <a href="/">Herramientas tecnológicas</a>
+              <Link to="/#simple-and-agile">¿Cómo lo hacemos?</Link>
+              <Link to="/#integrations">Herramientas tecnológicas</Link>
             </div>
             <div className={styles.menuColumn}>
-              <a href="/">Casos de éxito</a>
-              <a href="/">¿Quiénes somos?</a>
+              <Link to="/#brands">Casos de éxito</Link>
+              <Link to="/#trust-the-experience">¿Quiénes somos?</Link>
             </div>
           </div>
         </div>

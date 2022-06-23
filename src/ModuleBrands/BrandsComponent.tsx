@@ -47,6 +47,7 @@ const BrandsComponent: FC<BrandsComponentProps> = () => {
     <>
       {windowWidth < breakPoint ? (
         <div
+          id="brands"
           style={{
             paddingTop: smPT,
             paddingRight: smPR,
@@ -66,24 +67,26 @@ const BrandsComponent: FC<BrandsComponentProps> = () => {
           />
         </div>
       ) : (
-        <MDWrapperComponent
-          paddingBottom={96}
-          paddingTop={96}
-          wrappedModule={WrappedModule.None}
-          backgroundColor={'#ffffff'}
-        >
-          <Col md={{ span: 10, offset: 1 }} ref={ref}>
-            <BMessageComponent />
-            <SimpleImageSlider
-              width={imgWidth}
-              height={imgHeight}
-              images={imagesMD}
-              showBullets={true}
-              showNavs={false}
-              style={{ backgroundColor: '#fff', margin: 'auto' }}
-            />
-          </Col>
-        </MDWrapperComponent>
+        <div id="brands">
+          <MDWrapperComponent
+            paddingBottom={96}
+            paddingTop={96}
+            wrappedModule={WrappedModule.None}
+            backgroundColor={'#ffffff'}
+          >
+            <Col md={{ span: 10, offset: 1 }} ref={ref}>
+              <BMessageComponent />
+              <SimpleImageSlider
+                width={imgWidth}
+                height={imgHeight}
+                images={imagesMD}
+                showBullets={true}
+                showNavs={false}
+                style={{ backgroundColor: '#fff', margin: 'auto' }}
+              />
+            </Col>
+          </MDWrapperComponent>
+        </div>
       )}
     </>
   );
