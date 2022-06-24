@@ -6,33 +6,51 @@ import PillButtonComponent, {
 } from '../../../ModuleCommon/components/PillButtonComponent/PillButtonComponent';
 import styles from './NavBarExpandedComponent.module.css';
 
-interface NavBarExpandedComponentProps {}
+interface NavBarExpandedComponentProps {
+  onClick: () => void;
+}
 
-const NavBarExpandedComponent: FC<NavBarExpandedComponentProps> = () => {
+const NavBarExpandedComponent: FC<NavBarExpandedComponentProps> = (props) => {
+  const clickHandler = () => {
+    props.onClick();
+  };
+
   return (
     <div className={styles.navigationMenu}>
       <ul>
         <li>
-          <Link to="/">Inicio</Link>
+          <Link to="/" onClick={clickHandler}>
+            Inicio
+          </Link>
         </li>
         <li>
-          <Link to="/#digital-sales">Nuestro modelo</Link>
+          <Link to="/#digital-sales" onClick={clickHandler}>
+            Nuestro modelo
+          </Link>
           <span>Descubre las ventajas de Global Sales Partnership</span>
         </li>
         <li>
-          <Link to="/#simple-and-agile">¿Cómo lo hacemos?</Link>
+          <Link to="/#simple-and-agile" onClick={clickHandler}>
+            ¿Cómo lo hacemos?
+          </Link>
           <span>Recursos y metodología adaptada a tus objetivos</span>
         </li>
         <li>
-          <Link to="/#intelligent-tech">Tecnologías</Link>
+          <Link to="/#intelligent-tech" onClick={clickHandler}>
+            Tecnologías
+          </Link>
           <span>Inteligencia de negocio a tu servicio</span>
         </li>
         <li>
-          <Link to="/#brands">Casos de éxito</Link>
+          <Link to="/#brands" onClick={clickHandler}>
+            Casos de éxito
+          </Link>
           <span>Así hemos ayudado a otras empresas</span>
         </li>
         <li>
-          <Link to="/#trust-the-experience">¿Quiénes somos?</Link>
+          <Link to="/#trust-the-experience" onClick={clickHandler}>
+            ¿Quiénes somos?
+          </Link>
           <span>HABITANT y Walmeric. La experiencia nos avala</span>
         </li>
       </ul>
@@ -55,10 +73,14 @@ const NavBarExpandedComponent: FC<NavBarExpandedComponentProps> = () => {
       </div>
       <div className={styles.langContainer}>
         <p className={styles.active}>
-          <Link to="/">ESP</Link>
+          <Link to="/" onClick={clickHandler}>
+            ESP
+          </Link>
         </p>
         <p>
-          <Link to="/">ENG</Link>
+          <Link to="/" onClick={clickHandler}>
+            ENG
+          </Link>
         </p>
       </div>
     </div>

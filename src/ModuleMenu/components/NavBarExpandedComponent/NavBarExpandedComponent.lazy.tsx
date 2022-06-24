@@ -1,10 +1,19 @@
 import React, { lazy, Suspense } from 'react';
 
-const LazyNavBarExpandedComponent = lazy(() => import('./NavBarExpandedComponent'));
+const LazyNavBarExpandedComponent = lazy(
+  () => import('./NavBarExpandedComponent')
+);
 
-const NavBarExpandedComponent = (props: JSX.IntrinsicAttributes & { children?: React.ReactNode; }) => (
+const NavBarExpandedComponent = (
+  props: JSX.IntrinsicAttributes & { children?: React.ReactNode }
+) => (
   <Suspense fallback={null}>
-    <LazyNavBarExpandedComponent {...props} />
+    <LazyNavBarExpandedComponent
+      onClick={function (): void {
+        throw new Error('Function not implemented.');
+      }}
+      {...props}
+    />
   </Suspense>
 );
 

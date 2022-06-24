@@ -30,7 +30,9 @@ const NavComponent: FC<NavComponentProps> = () => {
           <Close />
         </IconButton>
       </div>
-      <NavBarExpandedComponent />
+      <NavBarExpandedComponent
+        onClick={() => setIsNavExpanded(!isNavExpanded)}
+      />
     </nav>
   ) : (
     <nav className={styles.navigation}>
