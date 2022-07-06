@@ -1,7 +1,9 @@
 import React, { FC } from 'react';
-import NavComponent from '../../ModuleMenu/components/NavComponent/NavComponent';
+import NavComponent from '../../../ModuleMenu/components/NavComponent/NavComponent';
 
-interface LayoutComponentProps {}
+interface LayoutComponentProps {
+  children?: any;
+}
 
 const LayoutComponent: FC<LayoutComponentProps> = (props) => (
   <>

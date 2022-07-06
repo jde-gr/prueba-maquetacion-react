@@ -3,11 +3,11 @@ import { Col } from 'react-bootstrap';
 import { useMeasure } from 'react-use';
 import ImgButtonComponent, {
   ImgIcon,
-} from '../ModuleCommon/components/ImgButtonComponent/ImgButtonComponent';
+} from '../core/components/ImgButtonComponent/ImgButtonComponent';
 
 import MDWrapperComponent, {
   WrappedModule,
-} from '../ModuleCommon/components/ModuleMDWrapperComponent/MDWrapperComponent';
+} from '../core/components/ModuleMDWrapperComponent/MDWrapperComponent';
 import CardComponent from './components/CardComponent/CardComponent';
 import H2DivComponent from './components/H2DivComponent/H2DivComponent';
 import ParagraphComponent from './components/ParagraphComponent/ParagraphComponent';

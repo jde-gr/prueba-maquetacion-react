@@ -59,7 +59,7 @@
 
 .arrowScroll {
   flex: none;
-  order: 2;
+  order: 3;
   flex-grow: 0;
   margin: 114px 0 32px 0;
   display: flex;

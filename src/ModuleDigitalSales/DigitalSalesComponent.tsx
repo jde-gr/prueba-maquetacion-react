@@ -4,7 +4,7 @@ import styles from './DigitalSalesComponent.module.css';
 import { Col } from 'react-bootstrap';
 import MDWrapperComponent, {
   WrappedModule,
-} from '../ModuleCommon/components/ModuleMDWrapperComponent/MDWrapperComponent';
+} from '../core/components/ModuleMDWrapperComponent/MDWrapperComponent';
 import DSMessageComponent from './components/DSMessageComponent/DSMessageComponent';
 import DSAdvantagesComponent from './components/DSAdvantagesComponent/DSAdvantagesComponent';
 

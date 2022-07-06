@@ -4,10 +4,10 @@ import { useMeasure } from 'react-use';
 
 import MDWrapperComponent, {
   WrappedModule,
-} from '../ModuleCommon/components/ModuleMDWrapperComponent/MDWrapperComponent';
+} from '../core/components/ModuleMDWrapperComponent/MDWrapperComponent';
 import PillButtonComponent, {
   PillIcon,
-} from '../ModuleCommon/components/PillButtonComponent/PillButtonComponent';
+} from '../core/components/PillButtonComponent/PillButtonComponent';
 import LTContactComponent from './components/LTContactComponent/LTContactComponent';
 import LTImageComponent from './components/LTImageComponent/LTImageComponent';
 import LTTitleComponent from './components/LTTitleComponent/LTTitleComponent';

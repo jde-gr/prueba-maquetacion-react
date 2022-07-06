@@ -13,7 +13,7 @@ import '@material-ui/core/colors';
 
 import PillButtonComponent, {
   PillIcon,
-} from '../../../ModuleCommon/components/PillButtonComponent/PillButtonComponent';
+} from '../../../core/components/PillButtonComponent/PillButtonComponent';
 import styles from './ChallengeFormComponent.module.css';
 
 // const isEmpty = (value: string) => value.trim() === '';

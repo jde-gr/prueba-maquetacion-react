@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
 
-import Arrow from '../../../ModuleCommon/components/Arrow/Arrow';
+import Arrow from '../../../core/components/Arrow/Arrow';
 import FormComponent from '../../../ModuleForm/FormComponent';
 import styles from './FrontPageContentComponent.module.css';
 
@@ -42,11 +42,11 @@ const FrontPageContentComponent: FC<FrontPageContentComponentProps> = ({
             alt="powered by HABITANT & walmeric"
           />
         </div>
-        <HashLink to="/#digital-sales">
-          <div className={styles.arrowScroll}>
+        <div className={styles.arrowScroll}>
+          <HashLink to="/#digital-sales">
             <Arrow down={true} />
-          </div>
-        </HashLink>
+          </HashLink>
+        </div>
       </Col>
       <Col xs={12} md={7} className={styles.imageColumn}>
         <div className={styles.imageContainer}>

@@ -19,6 +19,7 @@ interface MDWrapperComponentProps {
   paddingTop: number;
   wrappedModule?: WrappedModule;
   backgroundColor?: string;
+  children?: any;
 }
 
 const MDWrapperComponent: FC<MDWrapperComponentProps> = (props) => {

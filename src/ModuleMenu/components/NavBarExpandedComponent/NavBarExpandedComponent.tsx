@@ -3,7 +3,7 @@ import { NavHashLink as Link } from 'react-router-hash-link';
 
 import PillButtonComponent, {
   PillIcon,
-} from '../../../ModuleCommon/components/PillButtonComponent/PillButtonComponent';
+} from '../../../core/components/PillButtonComponent/PillButtonComponent';
 import styles from './NavBarExpandedComponent.module.css';
 
 interface NavBarExpandedComponentProps {

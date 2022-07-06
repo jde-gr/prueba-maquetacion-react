@@ -4,7 +4,7 @@ import { useMeasure } from 'react-use';
 
 import MDWrapperComponent, {
   WrappedModule,
-} from '../ModuleCommon/components/ModuleMDWrapperComponent/MDWrapperComponent';
+} from '../core/components/ModuleMDWrapperComponent/MDWrapperComponent';
 import BMessageComponent from './components/BMessageComponent/BMessageComponent';
 import BCarouselComponent from './components/BCarouselComponent/BCarouselComponent';
 

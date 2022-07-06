@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import styles from './FormComponent.module.css';
 import PillButtonComponent, {
   PillIcon,
-} from '../ModuleCommon/components/PillButtonComponent/PillButtonComponent';
+} from '../core/components/PillButtonComponent/PillButtonComponent';
 
 interface FormComponentProps {
   onClick: () => void;

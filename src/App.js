@@ -12,7 +12,7 @@ import BrandsComponent from './ModuleBrands/BrandsComponent';
 import LetUsTalkComponent from './ModuleLetUsTalk/LetUsTalkComponent';
 import FooterComponent from './ModuleFooter/FooterComponent';
 import FormContext from './store/FormContext';
-import LayoutComponent from './components/LayoutComponent/LayoutComponent';
+import LayoutComponent from './core/components/LayoutComponent/LayoutComponent';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
