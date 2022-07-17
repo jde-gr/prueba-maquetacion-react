@@ -6,8 +6,8 @@ import {
   CardActions,
   CardContent,
   CardHeader,
-} from '@material-ui/core';
-import { KeyboardArrowDown } from '@material-ui/icons';
+} from '@mui/material';
+import { KeyboardArrowDown } from '@mui/icons-material';
 
 import styles from './CardComponent.module.css';
 import bgImg from '../../../components/backgrounds/particles.png';

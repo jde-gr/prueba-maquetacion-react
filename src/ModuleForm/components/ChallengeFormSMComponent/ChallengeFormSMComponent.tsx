@@ -1,4 +1,4 @@
-import { KeyboardArrowDown, KeyboardArrowUp } from '@material-ui/icons';
+import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
 import React, { FC, useState } from 'react';
 import ModalComponent from '../../../core/components/ModalComponent/ModalComponent';
 import ChallengeFormComponent from '../ChallengeFormComponent/ChallengeFormComponent';

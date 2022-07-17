@@ -8,8 +8,8 @@ import {
   styled,
   TextField,
   TextFieldProps,
-} from '@material-ui/core';
-import '@material-ui/core/colors';
+} from '@mui/material';
+import '@mui/material/colors';
 
 import PillButtonComponent, {
   PillIcon,
@@ -120,15 +120,6 @@ const ChallengeFormComponent: FC<ChallengeFormComponentProps> = (props) => {
     },
   });
 
-  const useStyles = makeStyles((theme) => ({
-    label: {
-      fontSize: theme.typography.pxToRem(11),
-      letterSpacing: '0.03333em',
-      lineHeight: theme.typography.pxToRem(14),
-    },
-  }));
-
-  const classes = useStyles();
   return (
     <div ref={ref}>
       <form className={styles.form} onSubmit={confirmHandler}>
@@ -175,7 +166,14 @@ const ChallengeFormComponent: FC<ChallengeFormComponentProps> = (props) => {
           className={styles.formControlLabel}
           control={<Checkbox className={styles.formCheckbox} />}
           label="Acepto que me envíen comunicaciones por parte de Global Sales Partnership*"
-          classes={classes}
+          sx={{
+            label: {
+              fontSize: '0.6875rem !important',
+              letterSpacing: '0.03333em',
+              lineHeight: '0.875rem !important',
+            },
+          }}
+          // classes={classes}
         />
         <FormControlLabel
           className={styles.formControlLabel}
@@ -183,7 +181,14 @@ const ChallengeFormComponent: FC<ChallengeFormComponentProps> = (props) => {
             <Checkbox className={styles.formCheckbox} defaultChecked required />
           }
           label="He leído y acepto la política de privacidad*"
-          classes={classes}
+          sx={{
+            label: {
+              fontSize: '0.6875rem !important',
+              letterSpacing: '0.03333em',
+              lineHeight: '0.875rem !important',
+            },
+          }}
+          // classes={classes}
           /* onChange={handlePrivacyPolicyChange} */
         />
         <div className={styles.actionsDiv}>

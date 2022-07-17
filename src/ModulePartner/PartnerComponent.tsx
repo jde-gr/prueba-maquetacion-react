@@ -6,7 +6,7 @@ import FrontPageContentComponent from './components/FrontPageContentComponent/Fr
 import ChallengeFormSMComponent from '../ModuleForm/components/ChallengeFormSMComponent/ChallengeFormSMComponent';
 import ChallengeFormComponent from '../ModuleForm/components/ChallengeFormComponent/ChallengeFormComponent';
 import FormContainerComponent from '../ModuleForm/components/FormContainerComponent/FormContainerComponent';
-import { Close } from '@material-ui/icons';
+import { Close } from '@mui/icons-material';
 
 interface PartnerComponentProps {
   onFormOpen: () => void;

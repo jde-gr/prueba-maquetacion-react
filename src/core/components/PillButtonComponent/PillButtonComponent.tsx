@@ -1,4 +1,4 @@
-import { KeyboardArrowUp, Send } from '@material-ui/icons';
+import { KeyboardArrowUp, Send } from '@mui/icons-material';
 import React, { FC } from 'react';
 import styles from './PillButtonComponent.module.css';
 
